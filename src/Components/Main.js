@@ -24,12 +24,26 @@ class Main extends Component {
 				<div className="row">
 					{drinks && drinks.map(
 						(drink, index) => {
+							let ingredients = [];
+							let measurements = [];
+							
+							for (var key in drink) {
+								if(drink[key] && key.includes("strIngredient")) {
+									ingredients.push(drink[key]);
+								}
+								if(drink[key] && key.includes("strMeasure") && drink[key].match(/[a-z]/i)) {
+									measurements.push(drink[key]);
+								}
+							 }
+
 							return (
 								<Card 	key={ index } 
 										name={ drink.strDrink }
 										glass={ drink.strGlass }
 										instructions={ drink.strInstructions }
 										image={ drink.strDrinkThumb }
+										ingredients={ ingredients }
+										measurements={ measurements }
 								/>
 							)
 						}
