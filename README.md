@@ -1,3 +1,8 @@
+# Six Gummy Bears and some Scotch
+Cocktail app that let's you search &amp; filter for cocktails built with React
+
+![Archer](https://media3.giphy.com/media/S6AY6LCYaXr9u/source.gif)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
