@@ -1,5 +1,6 @@
 # Six Gummy Bears and some Scotch
-Cocktail app that let's you search &amp; filter for cocktails built with React
+Cocktail app that let's you search &amp; filter for cocktails built with React.
+This could not be possible without [The Cocktail DB API](https://www.thecocktaildb.com/api.php)!
 
 ![Archer](https://media3.giphy.com/media/S6AY6LCYaXr9u/source.gif)
 
