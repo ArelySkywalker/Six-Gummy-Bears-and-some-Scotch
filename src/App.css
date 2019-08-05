@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+	background: #fff6da;
+	text-align: center;
 }
 
 .App-logo {
@@ -25,6 +26,17 @@
 
 .App img {
 	max-width: 100%;
+}
+
+.Main {
+	padding: 100px 30px;
+}
+
+.Card .inner {
+	background: white;
+	height: 100%;
+	padding: 40px;
+	margin: 20px;
 }
 
 @keyframes App-logo-spin {

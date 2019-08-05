@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
 import Card from './Card';
 import { render } from "react-dom";
 
@@ -23,8 +20,8 @@ class Main extends Component {
 		const drinks = data.drinks;
 		return (
 		<div className="Main">
-			<Grid item xs={3}>
-				<Paper className="Paper">
+			<div className="container">
+				<div className="row">
 					{drinks && drinks.map(
 						(drink, index) => {
 							return (
@@ -37,8 +34,8 @@ class Main extends Component {
 							)
 						}
 					)}
-				</Paper>
-			</Grid>
+				</div>
+			</div>
 		</div>
 		);
 	}
