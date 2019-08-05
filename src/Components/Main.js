@@ -36,7 +36,7 @@ class Main extends Component {
 								}
 								// Some measurement objects aren't truly "epmty", so let's add in
 								// The match function to make sure at least a character is in
-								if(drink[key] && key.includes("strMeasure") && drink[key].match(/[a-z]/i)) {
+								if(drink[key] && key.includes("strMeasure") && drink[key].match(/[a-zA-Z0-9]/i)) {
 									measurements.push(drink[key]);
 								}
 							 }
