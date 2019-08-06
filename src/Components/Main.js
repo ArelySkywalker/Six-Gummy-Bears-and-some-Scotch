@@ -1,43 +1,20 @@
-import React, { Component } from 'react';
-import Header from './Header';
-import Ingredient from './Ingredient';
-import Whiskey from './Images/whiskey.jpg';
-import Vodka from './Images/vodka.jpg';
-import Gin from './Images/gin.jpg';
-import Rum from './Images/rum.jpg';
-import Tequila from './Images/tequila.jpg';
+// Import our Routers
+import React, { Component }  from 'react';
+import { BrowserRouter, Router, Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import Recipes from './Recipes';
 
-const categories = [
-	{ name: 'Whiskey', image: Whiskey },
-	{ name: 'Vodka', image: Vodka },
-	{ name: 'Gin', image: Gin },
-	{ name: 'Rum', image: Rum },
-	{ name: 'Tequila', image: Tequila }
-];
-
-class Main extends Component {
-
-	render() {
-		return (
-			<div className="Main">
-				<Header />
-				<div className="Main-ingredients">
-					{categories && categories.map(
-						(item, index) => {
-							return (
-								<Ingredient 	
-									key={ index } 
-									name={ item.name }
-									image={ item.image }
-								/>
-							)
-						}
-					)}
-				</div>
-			</div>
-		);
-	}
-}
-
+const Main = () => (
+	<BrowserRouter>
+		<Switch>
+			<Route exact path="/" component={ Home } />
+			<Route path="/whiskey" component={ Recipes } />
+			<Route path="/vodka" component={ Recipes } />
+			<Route path="/gin" component={ Recipes } />
+			<Route path="/rum" component={ Recipes } />
+			<Route path="/tequila" component={ Recipes } />
+		</Switch>
+	</BrowserRouter>
+)
 
 export default Main;

@@ -6,19 +6,20 @@
 	h1 								{ font-family: $header-font; font-size: 3.5rem; }
 	p 								{ font-family: 'Montserrat', sans-serif; }
 
-	.Main							{ height: 100vh; 
-		.Header 					{ height: 10%; padding: 0 40px;
-			.row 					{ align-items: center; height: 100%; }
-			.Nav-icon 				{ text-align: left;
-				.fas, h1 			{ display: inline-block; margin: 0; vertical-align: middle; }
-				.fas 				{ color: $primary-color; font-size: 2rem; margin-right: 15px; }
-			}
-			.Title 					{ text-align: right; 
-				.fas 				{ font-size: 2rem; }
-			}
+	.Header 					{ height: 10%; padding: 0 40px;
+		.row 					{ align-items: center; height: 100%; }
+		.Nav-icon 				{ text-align: left;
+			.fas, h1 			{ display: inline-block; margin: 0; vertical-align: middle; }
+			.fas 				{ color: $primary-color; font-size: 2rem; margin-right: 15px; }
 		}
+		.Title 					{ text-align: right; 
+			.fas 				{ font-size: 2rem; }
+		}
+	}
+	
+	.Home							{ height: 100vh;
 
-		.Main-ingredients			{ height: 90%;
+		.Home-ingredients			{ height: 90%; width: 100%;
 			.Ingredient				{ background-position: center center; background-size: cover; cursor: pointer; display: table; float: left; height: 100%; position: relative; width: 20%;
 				&:before			{ content: ''; background-color: rgba($black, .6); position: absolute; top: 0; left: 0; height: 100%; transition: all .3s; width: 100%; }
 				&:hover 			{
@@ -31,7 +32,7 @@
 			}
 		}
 		.Card						{ margin-bottom: 40px;
-		.inner						{ background: $honeydew; -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3); height: 100%; padding: 40px; }
+			.inner					{ background: $honeydew; -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3); height: 100%; padding: 40px; }
 		}
 	}
 }

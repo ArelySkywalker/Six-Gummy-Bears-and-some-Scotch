@@ -6,7 +6,9 @@ import './Styles/App.scss';
 function App() {
 	return (
 		<div className="App">
-			<Main />
+			<div className="Main">
+				<Main />
+			</div>
 		</div>
 	);
 }

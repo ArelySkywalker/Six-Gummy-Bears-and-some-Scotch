@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Card extends Component {
 	render() {
 		return (
-			<div className="Card col-lg-4">
+			<div className="Card col-lg-6">
 				<div className="inner">
 					<img src={ this.props.image } alt={ this.props.name } />
 					<h3>{ this.props.name }</h3>
