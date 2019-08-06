@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './Header';
 import Ingredient from './Ingredient';
 import Whiskey from './Images/whiskey.jpg';
 import Vodka from './Images/vodka.jpg';
@@ -19,6 +20,7 @@ class Main extends Component {
 	render() {
 		return (
 			<div className="Main">
+				<Header />
 				<div className="Main-ingredients">
 					{categories && categories.map(
 						(item, index) => {
