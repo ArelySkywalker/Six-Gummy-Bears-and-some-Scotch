@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import Card from './Card';
 
-state = {
-    data:[],
-    url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=tequila"
-};
-
-componentDidMount() {
-    fetch(this.state.url)
-    .then(response => response.json())
-    .then(data => this.setState({ data }));
-}
-
 class Recipes extends Component {
+    state = {
+        data:[],
+        url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=tequila"
+    };
+    
+    componentDidMount() {
+        fetch(this.state.url)
+        .then(response => response.json())
+        .then(data => this.setState({ data }));
+    }
+    
     render() {
         const { data } = this.state;
 		const drinks = data.drinks;
@@ -53,3 +53,5 @@ class Recipes extends Component {
         );
     }
 }
+
+export default Recipes;
