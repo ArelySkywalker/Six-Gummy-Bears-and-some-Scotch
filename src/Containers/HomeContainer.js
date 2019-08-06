@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Ingredient from './Ingredient';
-import Whiskey from './Images/whiskey.jpg';
-import Vodka from './Images/vodka.jpg';
-import Gin from './Images/gin.jpg';
-import Rum from './Images/rum.jpg';
-import Tequila from './Images/tequila.jpg';
+import Header from '../Components/Header';
+import Ingredient from '../Components/Ingredient';
+import Whiskey from '../Components/Images/whiskey.jpg';
+import Vodka from '../Components/Images/vodka.jpg';
+import Gin from '../Components/Images/gin.jpg';
+import Rum from '../Components/Images/rum.jpg';
+import Tequila from '../Components/Images/tequila.jpg';
 
 const categories = [
 	{ name: 'Whiskey', image: Whiskey, link: '/whiskey' },
@@ -15,7 +15,7 @@ const categories = [
 	{ name: 'Tequila', image: Tequila, link: '/tequila' }
 ];
 
-class Home extends Component {
+class HomeContainer extends Component {
 
 	render() {
 		return (
@@ -41,4 +41,4 @@ class Home extends Component {
 }
 
 
-export default Home;
+export default HomeContainer;

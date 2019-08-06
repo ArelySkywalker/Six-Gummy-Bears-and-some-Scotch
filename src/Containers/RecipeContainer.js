@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Banner from './Banner';
-import Card from './Card';
+import Header from '../Components/Header';
+import Banner from '../Components/Banner';
+import Card from '../Components/Card';
 
 const str = window.location.href;
 var base = new String(str).substring(str.lastIndexOf('/') + 1); 
@@ -9,7 +9,7 @@ if(base.lastIndexOf(".") !== -1) {
 	base = base.substring(0, base.lastIndexOf("."));
 }
 
-class Recipes extends Component {
+class RecipeContainer extends Component {
 	state = {
 		data:[],
 		url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + base
@@ -71,4 +71,4 @@ class Recipes extends Component {
 	}
 }
 
-export default Recipes;
+export default RecipeContainer;
