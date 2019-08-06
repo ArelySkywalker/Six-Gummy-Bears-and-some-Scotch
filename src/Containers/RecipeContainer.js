@@ -31,34 +31,12 @@ class RecipeContainer extends Component {
 					<div className="row">
 						{drinks && drinks.map(
 							(drink, index) => {
-
-								// The API does not put the Ingredients and Mesurements grouped in
-								// an array together, so let's do that ourselves.
-								let ingredients = [];
-								let measurements = [];
-								
-								for (var key in drink) {
-									if(drink[key] && key.includes("strIngredient")) {
-										ingredients.push(drink[key]);
-									}
-									// Some measurement objects aren't truly "epmty", so let's add in
-									// The match function to make sure at least a character is in
-									if(drink[key] && key.includes("strMeasure") && drink[key].match(/[a-zA-Z0-9]/i)) {
-										measurements.push(drink[key]);
-									}
-								}
-
-								console.log(drink);
-
 								return (
 									<Card 	
 										key={ index } 
 										name={ drink.strDrink }
-										glass={ drink.strGlass }
-										instructions={ drink.strInstructions }
+										id={ drink.idDrink }
 										image={ drink.strDrinkThumb }
-										ingredients={ ingredients }
-										measurements={ measurements }
 									/>
 								)
 							}
