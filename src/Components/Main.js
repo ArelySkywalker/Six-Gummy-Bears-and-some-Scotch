@@ -21,7 +21,7 @@ class Main extends Component {
 	render() {
 		return (
 		<div className="Main">
-			<div className="row">
+			<div className="row Main-ingredients">
 				{categories && categories.map(
 					(item, index) => {
 						return (
