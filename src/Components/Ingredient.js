@@ -8,6 +8,7 @@ class Ingredient extends Component {
 				<div className={ `Ingredient ${ this.props.name }` } style={ { backgroundImage: `url(${ this.props.image })` } }>
 					<div className="inner">
 						<h1>{ this.props.name }</h1>
+						<p>view recipes</p>
 					</div>
 				</div>
 			</LazyLoad>

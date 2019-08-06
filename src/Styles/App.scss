@@ -4,13 +4,14 @@
 .App								{ background: $white; text-align: center;
 	img								{ max-width: 100%; }
 	h1 								{ font-family: $header-font; font-size: 3.5rem; }
+	p 								{ font-family: 'Montserrat', sans-serif; }
 
 	.Main							{ height: 100vh; 
 		.Header 					{ height: 10%; padding: 0 40px;
 			.row 					{ align-items: center; height: 100%; }
 			.Nav-icon 				{ text-align: left;
 				.fas, h1 			{ display: inline-block; margin: 0; vertical-align: middle; }
-				.fas 				{ color: $primary-color; margin-right: 15px; }
+				.fas 				{ color: $primary-color; font-size: 2rem; margin-right: 15px; }
 			}
 			.Title 					{ text-align: right; 
 				.fas 				{ font-size: 2rem; }
@@ -19,12 +20,12 @@
 
 		.Main-ingredients			{ height: 90%;
 			.Ingredient				{ background-position: center center; background-size: cover; cursor: pointer; display: table; float: left; height: 100%; position: relative; width: 20%;
-				&:before			{ content: ''; background-color: rgba($black, .6); position: absolute; top: 0; left: 0; height: 100%; transition: all .5s; width: 100%; }
+				&:before			{ content: ''; background-color: rgba($black, .6); position: absolute; top: 0; left: 0; height: 100%; transition: all .3s; width: 100%; }
 				&:hover 			{
 					&:before 		{ background-color: rgba($black, .3); }
 				}
 				.inner				{ display: table-cell; position: relative; vertical-align: middle; z-index: 100;
-				h1					{ color: $white; }
+				h1,p				{ text-shadow: 0px 10px 10px rgba($black, 1); color: $white; margin: 0; }
 				}
 				&.Tequila, .Gin		{ background-position: center right; }
 			}
