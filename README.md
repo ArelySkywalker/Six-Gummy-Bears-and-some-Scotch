@@ -4,6 +4,9 @@ This could not be possible without [The Cocktail DB API](https://www.thecocktail
 
 ![Archer](https://media3.giphy.com/media/S6AY6LCYaXr9u/source.gif)
 
+## Demo
+![demo](https://github.com/ArelySkywalker/Six-Gummy-Bears-and-some-Scotch/blob/master/demo.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
