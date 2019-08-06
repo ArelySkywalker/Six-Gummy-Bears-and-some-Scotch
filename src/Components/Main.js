@@ -26,9 +26,9 @@ class Main extends Component {
 						(item, index) => {
 							return (
 								<Ingredient 	
-										key={ index } 
-										name={ item.name }
-										image={ item.image }
+									key={ index } 
+									name={ item.name }
+									image={ item.image }
 								/>
 							)
 						}
