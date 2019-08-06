@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import Banner from './Banner';
 import Card from './Card';
+
+const str = window.location.href;
+var base = new String(str).substring(str.lastIndexOf('/') + 1); 
+if(base.lastIndexOf(".") !== -1) {
+	base = base.substring(0, base.lastIndexOf("."));
+}
 
 class Recipes extends Component {
 	state = {
 		data:[],
-		url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=tequila"
+		url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + base
 	};
 
 	componentDidMount() {
@@ -20,6 +27,7 @@ class Recipes extends Component {
 		return (
 			<div className="Recipes">
 				<Header />
+				<Banner />
 				<div className="Recipes-loop container">
 					<div className="row">
 						{drinks && drinks.map(
@@ -40,6 +48,8 @@ class Recipes extends Component {
 										measurements.push(drink[key]);
 									}
 								}
+
+								console.log(drink);
 
 								return (
 									<Card 	
