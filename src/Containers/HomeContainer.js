@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../Components/Header';
 import Ingredient from '../Components/Ingredient';
 import Whiskey from '../Components/Images/whiskey.jpg';
 import Vodka from '../Components/Images/vodka.jpg';
@@ -20,7 +19,6 @@ class HomeContainer extends Component {
 	render() {
 		return (
 			<div className="Home">
-				<Header />
 				<div className="Home-ingredients">
 					{categories && categories.map(
 						(item, index) => {

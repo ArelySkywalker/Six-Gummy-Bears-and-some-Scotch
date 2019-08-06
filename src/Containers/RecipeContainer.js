@@ -26,7 +26,6 @@ class RecipeContainer extends Component {
 		const drinks = data.drinks;
 		return (
 			<div className="Recipes">
-				<Header />
 				<Banner />
 				<div className="Recipes-loop container">
 					<div className="row">
