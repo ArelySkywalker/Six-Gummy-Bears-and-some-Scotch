@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
+import LazyLoad from 'react-lazyload';
 
 class Ingredient extends Component {
-    render() {
-        return (
-            <div className={ `Ingredient col-lg-4 col-md-6 col-sm-12 ${ this.props.name }` } style={ { backgroundImage: `url(${ this.props.image })` } }>
-                <div className="inner">
-                    <h1>{ this.props.name }</h1>
-                </div>        
-            </div>
-        );
-    }
+	render() {
+		return (
+			<LazyLoad>
+				<div className={ `Ingredient ${ this.props.name }` } style={ { backgroundImage: `url(${ this.props.image })` } }>
+					<div className="inner">
+						<h1>{ this.props.name }</h1>
+					</div>
+				</div>
+			</LazyLoad>
+		);
+	}
 }
 
 export default Ingredient;

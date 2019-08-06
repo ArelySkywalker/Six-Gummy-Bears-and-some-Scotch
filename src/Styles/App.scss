@@ -1,21 +1,26 @@
 // Variables
 @import "./Variables.scss";
 
-.App                            {  background: $white; text-align: center;
-    img                         { max-width: 100%; }
+.App								{ background: $white; text-align: center;
+	img								{ max-width: 100%; }
+	h1 								{ font-family: $header-font; font-size: 3.5rem; }
 
-    .Main                       { 
-      .Main-ingredients         { height: 100vh;
-        .Ingredient             { background-position: center center; background-size: cover; display: table; height: 50%; position: relative; 
-          &:before              { content: ''; background-color: rgba($black, .6); position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
-          .inner                { display: table-cell; position: relative; vertical-align: middle; z-index: 100;
-            h1                  { color: $white; }
-          }
-          &.Tequila, .Gin       { background-position: center right; }
-        }
-      }
-      .Card                     { margin-bottom: 40px;
-        .inner                  { background: $honeydew; -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3); height: 100%; padding: 40px; }
-      }
-    }
+	.Main							{
+		.Main-ingredients			{ height: 100vh;
+		.Ingredient					{ background-position: center center; background-size: cover; cursor: pointer; display: table; float: left; height: 100%; position: relative; width: 18%;
+			&:before				{ content: ''; background-color: rgba($black, .6); position: absolute; top: 0; left: 0; height: 100%; transition: all .5s; width: 100%; }
+			&:hover 				{
+				&:before 			{ background-color: rgba($black, .3); }
+			}
+			.inner					{ display: table-cell; position: relative; vertical-align: middle; z-index: 100;
+			h1						{ color: $white; }
+			}
+			&.Tequila, .Gin			{ background-position: center right; }
+			&.Whiskey 				{ width: 28%; }
+		}
+		}
+		.Card						{ margin-bottom: 40px;
+		.inner						{ background: $honeydew; -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3); height: 100%; padding: 40px; }
+		}
+	}
 }

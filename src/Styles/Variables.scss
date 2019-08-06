@@ -13,3 +13,13 @@ $black: #000000;
 $white: #FFFFFF;
 $light-gray: #E3E3E3;
 $gray: #A2A2A2;
+
+@font-face {
+	font-family: 'Riffle';
+	font-style: normal;
+	font-weight: normal;
+	src: url('./Fonts/Riffle.otf') format('otf'),
+		url('./Fonts/Riffle.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+$header-font: 'Riffle';

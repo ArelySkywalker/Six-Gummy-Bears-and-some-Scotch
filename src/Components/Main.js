@@ -5,15 +5,13 @@ import Vodka from './Images/vodka.jpg';
 import Gin from './Images/gin.jpg';
 import Rum from './Images/rum.jpg';
 import Tequila from './Images/tequila.jpg';
-import Mezcal from './Images/mezcal.jpg';
 
 const categories = [
-    { name: 'Whiskey', image: Whiskey },
-    { name: 'Vodka', image: Vodka },
-    { name: 'Gin', image: Gin },
-    { name: 'Rum', image: Rum },
-    { name: 'Tequila', image: Tequila },
-    { name: 'Mezcal', image: Mezcal }
+	{ name: 'Whiskey', image: Whiskey },
+	{ name: 'Vodka', image: Vodka },
+	{ name: 'Gin', image: Gin },
+	{ name: 'Rum', image: Rum },
+	{ name: 'Tequila', image: Tequila }
 ];
 
 class Main extends Component {
@@ -21,7 +19,7 @@ class Main extends Component {
 	render() {
 		return (
 			<div className="Main">
-				<div className="row Main-ingredients">
+				<div className="Main-ingredients">
 					{categories && categories.map(
 						(item, index) => {
 							return (
