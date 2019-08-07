@@ -35,11 +35,17 @@ class Card extends Component {
 								}
 							}
 
+							// Let's call in the Drink's glass and assign them to our
+							// special glass icons!
 							var strGlass = drink.strGlass;
 							let glass = '';
+
+							// Margarita/Coupette is a special case, since we don't want to
+							// name an image with a slash in it, let's swap this out.
 							if(strGlass === 'Margarita/Coupette glass') {
 								glass = 'margarita_coupetteglass';
 							}else{
+								// Lowercase the glass name and take out all spaces.
 								glass = strGlass.toLowerCase().replace(/\s+/g, '');
 							}
 							
