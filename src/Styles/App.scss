@@ -3,8 +3,10 @@
 
 .App									{ background: $white; text-align: center;
 	img									{ max-width: 100%; }
-	h1 									{ font-family: $header-font; font-size: 3.5rem; }
-	p 									{ font-family: 'Montserrat', sans-serif; }
+	h1,h2,h3,h4,h5,h6 					{ font-family: $header-font; }
+	h1 									{ font-size: 3.5rem; }
+	p 									{ font-family: $body-font; }
+
 	.Main 								{ height: 100vh;
 		.Header 						{ height: 10%; padding: 0 40px;
 			.row 						{ align-items: center; height: 100%; }
@@ -62,7 +64,7 @@
 				}
 				.inner					{ -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.15); height: 100%; margin: 0 20px; padding: 40px; transition: all .3s; 
 					.Card-drink 		{ 
-						.icon 			{ max-height: 100px; }
+						.icon 			{ margin-bottom: 20px; max-height: 100px; }
 						.drink-name 	{ color: $primary-color; } 
 					}
 				}
