@@ -15,7 +15,7 @@ class Card extends Component {
 		const { data } = this.state;
 		const drinks = data.drinks;
 		return (
-			<div className="Card col-lg-6">
+			<div className="Card col-lg-4">
 				<div className="inner">
 				{drinks && drinks.map(
 					(drink, index) => {

@@ -28,7 +28,7 @@ class RecipeContainer extends Component {
 			<div className="Recipes">
 				<Banner />
 				<div className="Recipes-loop container">
-					<div className="row">
+					<div className="row justify-content-md-center">
 						{drinks && drinks.map(
 							(drink, index) => {
 								return (
