@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Ingredient from '../Components/Ingredient';
-import Whiskey from '../Components/Images/whiskey.jpg';
-import Vodka from '../Components/Images/vodka.jpg';
-import Gin from '../Components/Images/gin.jpg';
-import Rum from '../Components/Images/rum.jpg';
-import Tequila from '../Components/Images/tequila.jpg';
+import Whiskey from '../Components/Images/Optimized-whiskey.jpg';
+import Vodka from '../Components/Images/Optimized-vodka.jpg';
+import Gin from '../Components/Images/Optimized-gin.jpg';
+import Rum from '../Components/Images/Optimized-rum.jpg';
+import Tequila from '../Components/Images/Optimized-tequila.jpg';
 
 const categories = [
 	{ name: 'Whiskey', image: Whiskey, link: '/whiskey' },
