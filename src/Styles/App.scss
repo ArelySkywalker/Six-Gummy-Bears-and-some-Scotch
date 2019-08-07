@@ -56,8 +56,11 @@
 		}
 
 		.Recipes 						{
-			.Card						{ margin-bottom: 40px;
-				.inner					{ -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3); height: 100%; padding: 40px; 
+			.Card						{ cursor: pointer; margin-bottom: 60px;
+				&:hover 				{
+					.inner 				{ -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.3); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3); }
+				}
+				.inner					{ -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.15); height: 100%; margin: 0 20px; padding: 40px; transition: all .3s; 
 					.Card-drink 		{ 
 						.icon 			{ max-height: 100px; }
 						.drink-name 	{ color: $primary-color; } 
