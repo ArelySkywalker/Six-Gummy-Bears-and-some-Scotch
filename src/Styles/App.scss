@@ -1,60 +1,70 @@
 // Variables
 @import "./Variables.scss";
 
-.App								{ background: $white; text-align: center;
-	img								{ max-width: 100%; }
-	h1 								{ font-family: $header-font; font-size: 3.5rem; }
-	p 								{ font-family: 'Montserrat', sans-serif; }
-
-	.Header 						{ height: 10%; padding: 0 40px;
-		.row 						{ align-items: center; height: 100%; }
-		.Nav-icon 					{ text-align: left;
-			a 						{ color: black; }
-			.fas, h1 				{ display: inline-block; margin: 0; vertical-align: middle; }
-			.fas 					{ color: $primary-color; font-size: 2rem; margin-right: 15px; }
-		}
-		.Title 						{ text-align: right; 
-			.fas 					{ font-size: 2rem; }
-		}
-	}
-
-	.Banner 						{
-		.Banner-bg 					{ background-position: center center; background-size: cover; display: table; margin-bottom: 80px; min-height: 450px; position: relative; width: 100%;
-			&:before 				{ content: ''; background: rgba($black, 0.7); position: absolute; height: 100%; top: 0; left: 0; width: 100%; }
-			.Banner-title 			{ color: $white; display: table-cell; font-size: 5rem; position: relative; text-shadow: 0px 10px 10px rgba($black, 1); vertical-align: middle; z-index: 1000; }
-		}
-		&.tequila 					{
-			.Banner-bg 				{ background-image: url('../Components/Images/tequila.jpg'); }
-		}
-		&.rum 						{
-			.Banner-bg 				{ background-image: url('../Components/Images/rum.jpg'); }
-		}
-		&.gin 						{
-			.Banner-bg 				{ background-image: url('../Components/Images/gin.jpg'); }
-		}
-		&.vodka 					{
-			.Banner-bg 				{ background-image: url('../Components/Images/vodka.jpg'); }
-		}
-		&.whiskey 					{
-			.Banner-bg 				{ background-image: url('../Components/Images/whiskey.jpg'); }
-		}
-	}
-
-	.Home							{ height: 100vh;
-		.Home-ingredients			{ height: 90%; width: 100%;
-			.Ingredient				{ background-position: center center; background-size: cover; cursor: pointer; display: table; float: left; height: 100%; position: relative; width: 20%;
-				&:before			{ content: ''; background-color: rgba($black, .6); position: absolute; top: 0; left: 0; height: 100%; transition: all .3s; width: 100%; }
-				&:hover 			{
-					&:before 		{ background-color: rgba($black, .3); }
-				}
-				.inner				{ display: table-cell; position: relative; vertical-align: middle; z-index: 100;
-				h1,p				{ text-shadow: 0px 10px 10px rgba($black, 1); color: $white; margin: 0; }
-				}
-				&.Tequila, .Gin		{ background-position: center right; }
+.App									{ background: $white; text-align: center;
+	img									{ max-width: 100%; }
+	h1 									{ font-family: $header-font; font-size: 3.5rem; }
+	p 									{ font-family: 'Montserrat', sans-serif; }
+	.Main 								{ height: 100vh;
+		.Header 						{ height: 10%; padding: 0 40px;
+			.row 						{ align-items: center; height: 100%; }
+			.Nav-icon 					{ text-align: left;
+				a 						{ color: black; }
+				.fas, h1 				{ display: inline-block; margin: 0; vertical-align: middle; }
+				.fas 					{ color: $primary-color; font-size: 2rem; margin-right: 15px; }
+			}
+			.Title 						{ text-align: right; 
+				.fas 					{ font-size: 2rem; }
 			}
 		}
-		.Card						{ margin-bottom: 40px;
-			.inner					{ background: $honeydew; -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3); height: 100%; padding: 40px; }
+	
+		.Banner 						{
+			.Banner-bg 					{ background-position: center center; background-size: cover; display: table; margin-bottom: 80px; min-height: 450px; position: relative; width: 100%;
+				&:before 				{ content: ''; background: rgba($black, 0.7); position: absolute; height: 100%; top: 0; left: 0; width: 100%; }
+				.Banner-title 			{ color: $white; display: table-cell; font-size: 5rem; position: relative; text-shadow: 0px 10px 10px rgba($black, 1); vertical-align: middle; z-index: 1000; }
+			}
+			&.tequila 					{
+				.Banner-bg 				{ background-image: url('../Components/Images/tequila.jpg'); }
+			}
+			&.rum 						{
+				.Banner-bg 				{ background-image: url('../Components/Images/rum.jpg'); }
+			}
+			&.gin 						{
+				.Banner-bg 				{ background-image: url('../Components/Images/gin.jpg'); }
+			}
+			&.vodka 					{
+				.Banner-bg 				{ background-image: url('../Components/Images/vodka.jpg'); }
+			}
+			&.whiskey 					{
+				.Banner-bg 				{ background-image: url('../Components/Images/whiskey.jpg'); }
+			}
+		}
+	
+		.Home							{ height: 90%; width: 100%;
+			.Home-ingredients			{ height: 100%; width: 100%;
+				.Ingredient				{ background-position: center center; background-size: cover; cursor: pointer; display: table; float: left; height: 100%; position: relative; width: 20%;
+					&:before			{ content: ''; background-color: rgba($black, .6); position: absolute; top: 0; left: 0; height: 100%; transition: all .3s; width: 100%; }
+					&:hover 			{
+						&:before 		{ background-color: rgba($black, .3); }
+					}
+					.inner				{ display: table-cell; position: relative; vertical-align: middle; z-index: 100;
+					h1,p				{ text-shadow: 0px 10px 10px rgba($black, 1); color: $white; margin: 0; }
+					}
+					&.Tequila, .Gin		{ background-position: center right; }
+				}
+			}
+		}
+
+		.Recipes 						{
+			.Card						{ margin-bottom: 40px;
+				.inner					{ -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3); height: 100%; padding: 40px; 
+					.Card-drink 		{ 
+						.icon 			{ max-height: 100px; }
+						.drink-name 	{ color: $primary-color; } 
+					}
+				}
+			}
 		}
 	}
+	
 }

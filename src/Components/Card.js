@@ -19,7 +19,6 @@ class Card extends Component {
 				<div className="inner">
 				{drinks && drinks.map(
 					(drink, index) => {
-							console.log(drink);
 							// The API does not put the Ingredients and Mesurements grouped in
 							// an array together, so let's do that ourselves.
 							let ingredients = [];
@@ -35,11 +34,21 @@ class Card extends Component {
 									measurements.push(drink[key]);
 								}
 							}
+
+							var strGlass = drink.strGlass;
+							let glass = '';
+							if(strGlass === 'Margarita/Coupette glass') {
+								glass = 'margarita_coupetteglass';
+							}else{
+								glass = strGlass.toLowerCase().replace(/\s+/g, '');
+							}
+							
 							return (
-								<div key={ drink.idDrink }>
-									<h3>{ drink.strDrink }</h3>
-									<p>Category: { drink.strCategory }</p>
-									<p>Glass: { drink.strGlass }</p>
+								<div className="Card-drink" key={ drink.idDrink }>
+									<img className="icon" alt={ drink.strGlass } src={require('./Images/glass/'+ glass +'.png')} />
+									<h3 className="drink-name">{ drink.strDrink }</h3>
+									<p className="drink-cat">Category: { drink.strCategory }</p>
+									<p className="drink-glass">Glass: { drink.strGlass }</p>
 								</div>
 							)	
 						}
