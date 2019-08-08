@@ -63,7 +63,7 @@
 					.inner 				{ -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.3); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3); }
 				}
 				.inner					{ -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.15); height: 100%; padding: 40px; transition: all .3s; 
-					.Card-drink 		{ 
+					.Card-drink 		{ color: $black; text-decoration: none;
 						.icon 			{ margin-bottom: 20px; max-height: 100px; }
 						.drink-name 	{ color: $primary-color; font-family: $header-font-2; } 
 					}
