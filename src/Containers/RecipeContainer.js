@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../Components/Header';
 import Banner from '../Components/Banner';
 import Card from '../Components/Card';
 

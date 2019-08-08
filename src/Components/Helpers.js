@@ -1,3 +1,13 @@
+function getBaseUrl() {
+	const str = window.location.href;
+
+	var base = new String(str).substring(str.lastIndexOf('/') + 1); 
+	if(base.lastIndexOf(".") !== -1) {
+		base = base.substring(0, base.lastIndexOf("."));
+	}
+	return base;
+}
+
 function getUrlVars() {
 	var vars = {};
 	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {

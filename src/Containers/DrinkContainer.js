@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Banner from '../Components/Banner';
 import Drink from '../Components/Drink';
-import { getUrlVars, getUrlParam } from '../Components/Helpers';
+import { getBaseURL, getUrlVars, getUrlParam } from '../Components/Helpers';
 
 
 var drinkID = getUrlParam('id','Empty');	
