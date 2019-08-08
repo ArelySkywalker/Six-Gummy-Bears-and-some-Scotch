@@ -52,6 +52,7 @@ html, body 								{ overflow-x: hidden; }
 		.Home							{ height: 90%; width: 100%;
 			.Home-ingredients			{ height: 100%; width: 100%;
 				.Ingredient				{ background-position: center center; background-size: cover; cursor: pointer; display: table; float: left; height: 100%; position: relative; width: 20%;
+					@media(max-width: 991px) { height: 500px; width: 100%; }
 					&:before			{ content: ''; background-color: rgba($black, .6); position: absolute; top: 0; left: 0; height: 100%; transition: all .3s; width: 100%; }
 					&:hover 			{
 						&:before 		{ background-color: rgba($black, .3); }
@@ -64,7 +65,7 @@ html, body 								{ overflow-x: hidden; }
 			}
 		}
 
-		.Recipes 						{
+		.Recipes 						{ padding-bottom: 80px;
 			.Card						{ cursor: pointer; margin-bottom: 40px;
 				&:hover 				{
 					.inner 				{ -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.3); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3); }
@@ -72,7 +73,7 @@ html, body 								{ overflow-x: hidden; }
 				.inner					{ -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.15); height: 100%; padding: 40px; transition: all .3s; 
 					.Card-drink 		{ color: $black; text-decoration: none;
 						.icon 			{ margin-bottom: 20px; max-height: 100px; }
-						.drink-name 	{ color: $primary-color; font-family: $header-font-2; } 
+						.drink-name 	{ color: $primary-color; font-family: $header-font-2; margin-bottom: 15px; } 
 					}
 				}
 			}

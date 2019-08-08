@@ -15,7 +15,7 @@ class Card extends Component {
 		const { data } = this.state;
 		const drinks = data.drinks;
 		return (
-			<div className="Card col-lg-4">
+			<div className="Card col-lg-4 col-md-6">
 				<div className="inner">
 				{drinks && drinks.map(
 					(drink, index) => {
@@ -38,8 +38,10 @@ class Card extends Component {
 								<a href={ `/drink?id=${ drink.idDrink }` } className="Card-drink" key={ drink.idDrink }>
 									<img className="icon" alt={ drink.strGlass } src={require('./Images/glass/'+ glass +'.png')} />
 									<h3 className="drink-name">{ drink.strDrink }</h3>
-									<p className="drink-cat">Category: { drink.strCategory }</p>
-									<p className="drink-glass">Glass: { drink.strGlass }</p>
+									<p className="drink-cat">
+										<strong>{ drink.strCategory }</strong><br />
+										{ drink.strGlass }
+									</p>
 								</a>
 							)	
 						}
