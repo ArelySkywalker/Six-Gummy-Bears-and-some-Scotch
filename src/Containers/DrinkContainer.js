@@ -44,8 +44,10 @@ class RecipeContainer extends Component {
 							}
 
 							// Now, let's put this all together!
-							for(let i = 0; i < measurements.length; i++) {
-								needs.push( measurements[i] + " " + ingredients[i] );
+							for(let i = 0; i < ingredients.length; i++) {
+								let ingredient = ingredients[i] ? ingredients[i] : '';
+								let measurement = measurements[i] ? measurements[i] : '';
+								needs.push( measurement + " " + ingredient );
 							}
 
 						return (
