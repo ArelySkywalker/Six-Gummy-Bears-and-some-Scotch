@@ -1,11 +1,18 @@
 // Variables
 @import "./Variables.scss";
 
+html, body 								{ overflow-x: hidden; }
+
 .App									{ background: $white; text-align: center;
 	img									{ max-width: 100%; }
-	h1,h2,h3,h4,h5,h6 					{ font-family: $header-font; }
+	h1,h2,h3,h4 						{ font-family: $header-font; }
 	h1 									{ font-size: 3.5rem; }
-	p 									{ font-family: $body-font; }
+	h4 									{ font-family: $header-font-2; }
+	h6 									{ font-family: $body-font; }
+	p, ul li, ol li 					{ font-family: $body-font; }
+	ul, ol 								{
+		li 								{ margin-bottom: 10px; }
+	}
 
 	.Main 								{ height: 100vh;
 		.Header 						{ height: 10%; padding: 0 40px;
@@ -66,6 +73,21 @@
 					.Card-drink 		{ color: $black; text-decoration: none;
 						.icon 			{ margin-bottom: 20px; max-height: 100px; }
 						.drink-name 	{ color: $primary-color; font-family: $header-font-2; } 
+					}
+				}
+			}
+		}
+
+		.DrinkContainer 				{ height: 90%; width: 100%;
+			.Drink 						{ height: 100%; 
+				.Drink-image 			{ background-position: center center; background-size: cover; }
+				.Drink-content 			{ 
+					.Drink-inner 		{ padding: 60px; text-align: left; 
+						.Drink-name 	{ border-bottom: 1px solid $primary-color; }
+						.Drink-needs 	{ margin: 40px 0; text-align: center;
+							ul 			{ text-align: left; }
+							.icon 		{ margin-bottom: 10px; max-height: 60px; }
+						}
 					}
 				}
 			}

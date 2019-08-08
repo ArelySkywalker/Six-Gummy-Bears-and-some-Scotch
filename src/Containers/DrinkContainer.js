@@ -22,34 +22,45 @@ class RecipeContainer extends Component {
 		const { data } = this.state;
 		const drinks = data.drinks;
 		return (
-			<div className="Drink">
+			<div className="DrinkContainer">
 				{drinks && drinks.map(
 					(drink, index) => {
+
+							// The API does not put the Ingredients and Mesurements grouped in
+							// an array together, so let's do that ourselves.
+							let ingredients = [];
+							let measurements = [];
+							let needs = [];
+							
+							for (var key in drink) {
+								if(drink[key] && key.includes("strIngredient")) {
+									ingredients.push(drink[key]);
+								}
+								// Some measurement objects aren't truly "epmty", so let's add in
+								// The match function to make sure at least a character is in
+								if(drink[key] && key.includes("strMeasure") && drink[key].match(/[a-zA-Z0-9]/i)) {
+									measurements.push(drink[key]);
+								}
+							}
+
+							// Now, let's put this all together!
+							for(let i = 0; i < measurements.length; i++) {
+								needs.push( measurements[i] + " " + ingredients[i] );
+							}
+
 						return (
-							<Banner 
-								name={ drink.strDrink } 
-								id={ drink.idDrink }
-								image={ drink.strDrinkThumb } 
+							<Drink 	
 								key={ index } 
+								name={ drink.strDrink }
+								id={ drink.idDrink }
+								image={ drink.strDrinkThumb }
+								needs={ needs }
+								instructions={ drink.strInstructions }
+								glass={ drink.strGlass }
 							/>
 						)
 					}
 				)}
-				<div className="container">
-					<div className="row justify-content-md-center">
-						{drinks && drinks.map(
-							(drink, index) => {
-								return (
-									<Drink 	
-										key={ index } 
-										name={ drink.strDrink }
-										id={ drink.idDrink }
-									/>
-								)
-							}
-						)}
-					</div>
-				</div>
 			</div>
 		);
 	}
