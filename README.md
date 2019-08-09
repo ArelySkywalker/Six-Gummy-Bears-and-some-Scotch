@@ -9,10 +9,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![demo](https://github.com/ArelySkywalker/Six-Gummy-Bears-and-some-Scotch/blob/master/demo.png)
 
 
-## Intro
-
-This project is not yet complete. There are some things to do, but I will update with a live link once it is done! I am not taking any pull requests at this time. Once it is complete, I'd be happy to add a Contributions section to take some Issues/Pull Requests!
-
 ## Available Scripts
 
 ```
