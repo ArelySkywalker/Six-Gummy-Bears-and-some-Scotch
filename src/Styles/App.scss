@@ -97,7 +97,7 @@ html, body 								{ overflow-x: hidden; }
 
 		.DrinkContainer 				{ height: 90%; width: 100%;
 			.Drink 						{ height: 100%; 
-				.Drink-image 			{ background-position: center center; background-size: cover; }
+				.Drink-image 			{ background-position: center center; background-size: cover; min-height: 500px; }
 				.Drink-content 			{ 
 					.Drink-inner 		{ padding: 60px; text-align: left; 
 						.Drink-name 	{ border-bottom: 1px solid $primary-color; }
