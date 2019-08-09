@@ -1,6 +1,8 @@
 # Six Gummy Bears and some Scotch
 Cocktail Search App that let's you search &amp; filter for cocktails built with React.<br>
 
+[Live App](https://gummy-bears-and-some-scotch.firebaseapp.com/)<br>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [The Cocktail DB API](https://www.thecocktaildb.com/api.php).
 
 ![Archer](https://media3.giphy.com/media/S6AY6LCYaXr9u/source.gif)
@@ -9,9 +11,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![demo](https://github.com/ArelySkywalker/Six-Gummy-Bears-and-some-Scotch/blob/master/demo.png)
 
 
-## Intro
+## Available Scripts
 
-This project is not yet complete. There are some things to do, but I will update with a live link once it is done! I am not taking any pull requests at this time. Once it is complete, I'd be happy to add a Contributions section to take some Issues/Pull Requests!
+Version 1 is now live! There is still a lot of work to do on this baby. Some stuff I want to implement are 
+ - 1. Add Search functionality
+ - 2. Create more filters
+ - 3. Always more room for refactoring!
 
 ## Available Scripts
 
