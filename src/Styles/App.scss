@@ -29,10 +29,10 @@ html, body 								{ overflow-x: hidden; }
 			
 			&.open 						{
 				.fa-bars 				{ display: none; }
-				.fa-times				{ display: block; }
+				.fa-times				{ color: $white; display: block; position: relative; z-index: 100000000000; }
 			}
 
-			.Menu 						{ align-items: center; background: rgba($black, 0.9); display: flex; height: 100%; margin-top: 6%; width: 100%; top: 0; left: 0; position: absolute; z-index: 1000000; 
+			.Menu 						{ align-items: center; background: rgba($black, 0.9); display: flex; height: 100%; width: 100%; top: 0; left: 0; position: absolute; z-index: 1000000; 
 				ul 						{ list-style-type: none; width: 100%; 
 					li 					{ margin: 20px 0;
 						a 				{ text-shadow: 0px 10px 10px rgba($black, 1); color: $white; font-family: $header-font; font-size: 3rem; padding: 5px 15px; 
