@@ -13,6 +13,12 @@ class Menu extends Component {
 		return (
 			<div className="Menu">
 				<ul>
+					<li className="search">
+						<form type="GET" action="/search" >
+							<i class="fas fa-search"></i>
+							<input type="text" name="s" placeholder="Search for a Drink" />
+						</form>
+					</li>
 					{categories && categories.map(
 						(item, index) => {
 							return (

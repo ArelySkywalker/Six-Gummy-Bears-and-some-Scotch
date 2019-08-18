@@ -39,6 +39,12 @@ html, body 								{ overflow-x: hidden; }
 							&:hover 	{ border-bottom: 1px solid $primary-color; text-decoration: none; }
 						}
 					}
+					.search 			{ margin-bottom: 50px;
+						.fa-search 		{ color: $white; font-size: 30px; margin-right: 15px; vertical-align: bottom; }
+						input 			{ background: transparent; border:none; border-bottom: 1px solid $white; color: $white; height: 50px; max-width: 400px; width: 100%; 
+							&:focus, &:active { border-bottom: 1px solid $white; box-shadow: none; outline: none; }
+						}
+					}
 				}
 			}
 		}
@@ -62,6 +68,9 @@ html, body 								{ overflow-x: hidden; }
 			}
 			&.whiskey 					{
 				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-whiskey.jpg') !important; }
+			}
+			&.search 					{
+				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-mezcal.jpg') !important; }
 			}
 		}
 	

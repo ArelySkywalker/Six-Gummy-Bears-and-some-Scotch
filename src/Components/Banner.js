@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 
 const str = window.location.href;
+var path = require('path');
+var base = path.basename(str);
+var title;
 
-var base = new String(str).substring(str.lastIndexOf('/') + 1); 
-if(base.lastIndexOf(".") !== -1) {
-	base = base.substring(0, base.lastIndexOf("."));
+if (base.indexOf("?")>-1){
+	title = base.substr(0,base.indexOf("?"))
+}else {
+	title = base;
 }
 
 class Banner extends Component {
 	render() {
 		return (
-			<div className={ `Banner ${ this.props.id ? `drink-` + this.props.id : base }` } >
+			<div className={ `Banner ${ this.props.id ? `drink-` + this.props.id : title }` } >
 				<div className="Banner-bg" style={ { backgroundImage: `url(${ this.props.image })` } }>
-					<h1 className="Banner-title">{ this.props.name ? this.props.name : base }</h1>
+					<h1 className="Banner-title">{ this.props.name ? this.props.name : title }</h1>
 				</div>
 			</div>
 		);

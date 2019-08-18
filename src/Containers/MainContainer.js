@@ -4,6 +4,7 @@ import { BrowserRouter, Router, Route, Switch } from 'react-router-dom';
 import HomeContainer from './HomeContainer';
 import RecipeContainer from './RecipeContainer';
 import DrinkContainer from './DrinkContainer';
+import SearchContainer from './SearchContainer';
 
 const MainContainer = () => (
 	<BrowserRouter>
@@ -15,6 +16,7 @@ const MainContainer = () => (
 			<Route path="/rum" component={ RecipeContainer } />
 			<Route path="/tequila" component={ RecipeContainer } />
 			<Route path="/drink" component={ DrinkContainer } />
+			<Route path="/search" component={ SearchContainer } />
 		</Switch>
 	</BrowserRouter>
 )
