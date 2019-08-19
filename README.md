@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![demo](https://github.com/ArelySkywalker/Six-Gummy-Bears-and-some-Scotch/blob/master/demo.png)
 
 
-## Available Scripts
+## Info & ToDos
 
 Version 1 is now live! There is still a lot of work to do on this baby. Some stuff I want to implement are 
  - 1. ~~Add Search functionality~~ Search functionality added!
