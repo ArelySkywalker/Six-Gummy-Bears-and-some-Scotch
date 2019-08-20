@@ -14,6 +14,12 @@ $white: #FFFFFF;
 $light-gray: #E3E3E3;
 $gray: #A2A2A2;
 
+// Breakpoints
+$screen-lg: 1199px;
+$screen-md: 991px;
+$screen-sm: 768px;
+
+// Fonts
 @font-face {
 	font-family: 'Riffle';
 	font-style: normal;
