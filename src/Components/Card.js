@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import Config from '../config';
 
 class Card extends Component {
 	state = {
 		data:[],
-		url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + this.props.id
+		url: Config.API_HOST + Config.API_ENDPOINT + Config.API_KEY + "/lookup.php?i=" + this.props.id
 	};
 
 	componentDidMount() {

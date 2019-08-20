@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Banner from '../Components/Banner';
+import Config from '../config';
 import Drink from '../Components/Drink';
 import { getBaseURL, getUrlVars, getUrlParam } from '../Components/Helpers';
 
@@ -9,7 +9,7 @@ var drinkID = getUrlParam('id','Empty');
 class RecipeContainer extends Component {
 	state = {
 		data:[],
-		url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkID
+		url: Config.API_HOST + Config.API_ENDPOINT + Config.API_KEY + "/lookup.php?i=" + drinkID
 	};
 
 	componentDidMount() {

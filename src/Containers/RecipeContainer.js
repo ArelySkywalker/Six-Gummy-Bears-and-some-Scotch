@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Config from '../config';
 import Banner from '../Components/Banner';
 import Card from '../Components/Card';
 
@@ -11,7 +12,7 @@ if(base.lastIndexOf(".") !== -1) {
 class RecipeContainer extends Component {
 	state = {
 		data:[],
-		url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + base
+		url: Config.API_HOST + Config.API_ENDPOINT + Config.API_KEY + "/filter.php?i=" + base
 	};
 
 	componentDidMount() {
