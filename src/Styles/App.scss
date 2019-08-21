@@ -146,7 +146,7 @@ html, body 								{ overflow-x: hidden; }
 					}
 				}
 				.submit					{
-					button 				{ border: 1px solid $primary-color; color: $primary-color; margin-top: 40px; padding: 10px 20px; transition: all .3s;
+					button 				{ background: $white; border: 1px solid $primary-color; color: $primary-color; margin-top: 40px; padding: 10px 20px; transition: all .3s;
 						&:hover, &:active, &:focus { background: $primary-color; color: $white; }
 					}
 				}
