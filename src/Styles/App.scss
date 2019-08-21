@@ -13,6 +13,7 @@ html, body 								{ overflow-x: hidden; }
 	ul, ol 								{
 		li 								{ margin-bottom: 10px; }
 	}
+	a 									{ color: $primary-color; }
 
 	.Main 								{ height: 100vh; position: relative;
 		.Header 						{ height: 10%; padding: 0 40px;
@@ -74,7 +75,7 @@ html, body 								{ overflow-x: hidden; }
 			&.whiskey 					{
 				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-whiskey.jpg') !important; }
 			}
-			&.search 					{
+			&.search, &.about 			{
 				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-mezcal.jpg') !important; }
 			}
 		}
@@ -133,7 +134,7 @@ html, body 								{ overflow-x: hidden; }
 				.menu 					{
 					ul 					{ display: flex; flex-direction: row; align-items: center; justify-content: flex-end; list-style-type: none; 
 						li 				{ margin: 0 15px;
-							a 			{ color: $queen-blue; padding: 5px 10px; }
+							a 			{ color: $primary-color; padding: 5px 10px; }
 						}
 					}
 				}
