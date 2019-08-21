@@ -22,28 +22,46 @@ class ResultsContainer extends Component {
 	render() {
 		const { data } = this.state;
 		const drinks = data.drinks;
-		return (
-			<div className="Recipes">
-				<Banner />
-				<div className="Recipes-loop container">
-					<div className="row justify-content-md-center">
-						{drinks && drinks.map(
-							(drink, index) => {
-								return (
-									<Card 	
-										key={ index } 
-										name={ drink.strDrink }
-										id={ drink.idDrink }
-										image={ drink.strDrinkThumb }
-									/>
-								)
-							}
-						)}
+
+		if(drinks == "None Found") {
+			return (
+				<div className="Recipes">
+					<Banner />
+					<div className="Recipes-loop container">
+						<div className="row justify-content-md-center">
+							<div className="col-12">
+								<h2>No Drinks Found.</h2>
+								<a className="btn" href="/filters">Seach Again</a>
+							</div>
+						</div>
 					</div>
+					<Footer />
 				</div>
-				<Footer />
-			</div>
-		);
+			);
+		}else {
+			return (
+				<div className="Recipes">
+					<Banner />
+					<div className="Recipes-loop container">
+						<div className="row justify-content-md-center">
+							{drinks && drinks.map(
+								(drink, index) => {
+									return (
+										<Card 	
+											key={ index } 
+											name={ drink.strDrink }
+											id={ drink.idDrink }
+											image={ drink.strDrinkThumb }
+										/>
+									)
+								}
+								)}
+						</div>
+					</div>
+					<Footer />
+				</div>
+			);
+		}
 	}
 }
 

@@ -14,6 +14,9 @@ html, body 								{ overflow-x: hidden; }
 		li 								{ margin-bottom: 10px; }
 	}
 	a 									{ color: $primary-color; }
+	.btn 								{ border: 1px solid $primary-color; border-radius: 0px; color: $primary-color; margin-top: 40px; padding: 10px 20px; transition: all .3s;
+		&:hover, &:active, &:focus 		{ background: $primary-color; color: $white; }
+	}
 
 	.Main 								{ height: 100vh; position: relative;
 		.Header 						{ height: 10%; padding: 0 40px;
