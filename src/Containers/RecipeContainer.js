@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Config from '../config';
+import Footer from '../Components/Footer';
 import Banner from '../Components/Banner';
 import Card from '../Components/Card';
 
@@ -43,6 +44,7 @@ class RecipeContainer extends Component {
 						)}
 					</div>
 				</div>
+				<Footer />
 			</div>
 		);
 	}

@@ -95,7 +95,8 @@ html, body 								{ overflow-x: hidden; }
 			}
 		}
 
-		.Recipes 						{ padding-bottom: 80px;
+		.Recipes 						{ 
+			.Recipes-loop 				{ padding-bottom: 80px; }
 			.Card						{ cursor: pointer; margin-bottom: 40px;
 				&:hover 				{
 					.inner 				{ -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.3); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3); }
@@ -118,6 +119,21 @@ html, body 								{ overflow-x: hidden; }
 						.Drink-needs 	{ margin: 40px 0; text-align: center;
 							ul 			{ text-align: left; }
 							.icon 		{ margin-bottom: 10px; max-height: 60px; }
+						}
+					}
+				}
+			}
+		}
+
+		.Footer 						{ padding: 40px 20px;
+			.row 						{ display: flex; flex-direction: row; align-items: center; 
+				.copyright 				{ text-align: left;
+					p 					{ font-size: 13px; margin: 0; }
+				}
+				.menu 					{
+					ul 					{ display: flex; flex-direction: row; align-items: center; justify-content: flex-end; list-style-type: none; 
+						li 				{ margin: 0 15px;
+							a 			{ color: $queen-blue; padding: 5px 10px; }
 						}
 					}
 				}
