@@ -26,6 +26,7 @@ class Menu extends Component {
 							)
 						}
 					)}
+					<li><a href="/filters">Available Ingredients</a></li>
 				</ul>
 			</div>
 		);

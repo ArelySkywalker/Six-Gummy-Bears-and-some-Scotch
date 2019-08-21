@@ -14,7 +14,7 @@ class Footer extends Component {
 						<div className="menu col-md-6">
 							<ul>
 								<li><a href="/about">About</a></li>
-								<li><a href="/available">Available Ingredients</a></li>
+								<li><a href="/filters">Available Ingredients</a></li>
 							</ul>
 						</div>
 					</div>

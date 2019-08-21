@@ -6,6 +6,8 @@ import RecipeContainer from './RecipeContainer';
 import DrinkContainer from './DrinkContainer';
 import SearchContainer from './SearchContainer';
 import AboutContainer from './AboutContainer';
+import FiltersContainer from './FiltersContainer';
+import ResultsContainer from './ResultsContainer';
 
 const MainContainer = () => (
 	<BrowserRouter>
@@ -19,6 +21,8 @@ const MainContainer = () => (
 			<Route path="/drink" component={ DrinkContainer } />
 			<Route path="/search" component={ SearchContainer } />
 			<Route path="/about" component={ AboutContainer } />
+			<Route path="/filters" component={ FiltersContainer } />
+			<Route path="/results" component={ ResultsContainer } />
 		</Switch>
 	</BrowserRouter>
 )

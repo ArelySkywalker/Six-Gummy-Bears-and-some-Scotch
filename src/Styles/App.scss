@@ -75,7 +75,7 @@ html, body 								{ overflow-x: hidden; }
 			&.whiskey 					{
 				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-whiskey.jpg') !important; }
 			}
-			&.search, &.about 			{
+			&.search, &.about, &.filters, &.results {
 				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-mezcal.jpg') !important; }
 			}
 		}
@@ -121,6 +121,30 @@ html, body 								{ overflow-x: hidden; }
 							ul 			{ text-align: left; }
 							.icon 		{ margin-bottom: 10px; max-height: 60px; }
 						}
+					}
+				}
+			}
+		}
+
+		.Filters 						{ margin-bottom: 100px;
+			form 						{ padding: 60px 30px; 
+				.select-wrapper			{
+					> div 				{ width: 100% !important; 
+						.input-area		{ background: $white !important; border: 1px solid $light-gray !important; 
+							.tags		{ background: $light-blue !important; color: $dark-gray !important; padding: 10px 15px !important; }
+						}
+						.option-area	{ background: $very-light-gray !important; 
+							button 		{ background: $primary-color !important; padding: 10px 20px !important; }
+							.option 	{
+								&:hover { background: $light-blue !important; color: $dark-gray !important; }
+							}
+						}
+						input 			{ @extend p; background: $white !important; }
+					}
+				}
+				.submit					{
+					button 				{ border: 1px solid $primary-color; color: $primary-color; margin-top: 40px; padding: 10px 20px; transition: all .3s;
+						&:hover, &:active, &:focus { background: $primary-color; color: $white; }
 					}
 				}
 			}
