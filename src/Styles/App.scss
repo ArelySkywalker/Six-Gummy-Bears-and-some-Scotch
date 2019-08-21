@@ -157,9 +157,11 @@ html, body 								{ overflow-x: hidden; }
 			.row 						{ display: flex; flex-direction: row; align-items: center; 
 				.copyright 				{ text-align: left;
 					p 					{ font-size: 13px; margin: 0; }
+					@media(max-width: $screen-sm) { text-align: center; }
 				}
 				.menu 					{
 					ul 					{ display: flex; flex-direction: row; align-items: center; justify-content: flex-end; list-style-type: none; 
+						@media(max-width: $screen-sm) { justify-content: center; margin-top: 40px; }
 						li 				{ margin: 0 15px;
 							a 			{ color: $primary-color; padding: 5px 10px; }
 						}
