@@ -18,7 +18,8 @@ html, body 								{ overflow-x: hidden; }
 		&:hover, &:active, &:focus 		{ background: $primary-color; color: $white; }
 	}
 
-	.Main 								{ height: 100vh; position: relative;
+	.Main 								{ position: relative;
+		&.root 							{ height: 100vh; }
 		.Header 						{ height: 10%; padding: 0 40px;
 			@media(max-width: $screen-sm) { height: initial; }
 			.row 						{ align-items: center; height: 100%; }
