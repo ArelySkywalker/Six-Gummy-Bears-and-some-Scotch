@@ -20,6 +20,7 @@ html, body 								{ overflow-x: hidden; }
 
 	.Main 								{ height: 100vh; position: relative;
 		.Header 						{ height: 10%; padding: 0 40px;
+			@media(max-width: $screen-sm) { height: initial; }
 			.row 						{ align-items: center; height: 100%; }
 			.Nav-icon 					{ text-align: left;
 				a 						{ color: black; }
@@ -84,6 +85,7 @@ html, body 								{ overflow-x: hidden; }
 		}
 	
 		.Home							{ height: 90%; width: 100%;
+			@media(max-width: $screen-sm) { height: initial; }
 			.Home-ingredients			{ height: 100%; width: 100%;
 				.Ingredient				{ background-position: center center; background-size: cover; cursor: pointer; display: table; float: left; height: 100%; position: relative; width: 20%;
 					@media(max-width: $screen-md) { height: 500px; width: 100%; }
@@ -115,6 +117,7 @@ html, body 								{ overflow-x: hidden; }
 		}
 
 		.DrinkContainer 				{ height: 90%; width: 100%;
+			@media(max-width: $screen-sm) { height: initial; }
 			.Drink 						{ height: 100%; 
 				.Drink-image 			{ background-position: center center; background-size: cover; min-height: 500px; }
 				.Drink-content 			{ 
