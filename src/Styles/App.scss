@@ -15,7 +15,7 @@ html, body 								{ overflow-x: hidden; }
 	}
 	a 									{ color: $primary-color; }
 
-	.Main 								{ height: 100vh; position: relative;
+	.Main 								{ min-height: 100vh; position: relative;
 		.Header 						{ height: 10%; padding: 0 40px;
 			.row 						{ align-items: center; height: 100%; }
 			.Nav-icon 					{ text-align: left;
