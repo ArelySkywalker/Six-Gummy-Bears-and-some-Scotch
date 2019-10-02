@@ -16,7 +16,7 @@ class Menu extends Component {
 					<li className="search">
 						<form type="GET" action="/search" >
 							<input type="text" name="s" placeholder="Search for a Drink" />
-							<button type="submit"><i class="fas fa-search"></i></button>
+							<button type="submit"><i className="fas fa-search"></i></button>
 						</form>
 					</li>
 					{categories && categories.map(
