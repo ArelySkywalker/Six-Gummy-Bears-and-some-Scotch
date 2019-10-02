@@ -16,7 +16,7 @@ html, body 								{ overflow-x: hidden; }
 	a 									{ color: $primary-color; }
 
 	.Main 								{ height: 100vh; position: relative;
-		@media(max-width: $screen-md)	{ height: initial; }
+		@media(max-width: $screen-md)	{ min-height: initial; }
 		.Header 						{ height: 10%; padding: 0 40px;
 			.row 						{ align-items: center; height: 100%; }
 			.Nav-icon 					{ text-align: left;
@@ -112,7 +112,7 @@ html, body 								{ overflow-x: hidden; }
 			}
 		}
 
-		.DrinkContainer 				{ height: 90%; width: 100%;
+		.DrinkContainer 				{ height: 100%; position: absolute; width: 100%;
 			.Drink 						{ height: 100%; 
 				.Drink-image 			{ background-position: center center; background-size: cover; min-height: 500px; }
 				.Drink-content 			{ 
