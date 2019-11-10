@@ -26,24 +26,19 @@ For people who contribute from now up until the end of this year (Dec 31), I wil
 
 When you contribute, be sure to edit this README file and add your name to the bottom of the list. 
 
-The format should be:
-
+The format should be:<br>
 { Name }, { Title }, { Favorite Drink }
 
-
-Examples:
-
-Arely Miramontes Rodríguez, Software Engineer, Margarita
-
-Cersei Lannister, Queen of the Seven Kingdoms, Wine
-
-Jane Doe, Student, Orange Juice  
+Examples:<br>
+Arely Miramontes Rodríguez, Software Engineer, Margarita<br>
+Cersei Lannister, Queen of the Seven Kingdoms, Wine<br>
+Jane Doe, Student, Orange Juice
 
 ## Getting Started
 
 In order to run the app, you'll need to edit the configStart.js file and rename it to config.js. My gitnore file will automatically hide that file if you decide to add your own API Key. Right now it has privileges of a normal developer for the API. You can use my app normally with this, but you will not be able to access the Available Ingredients feature of my app since that requires a paid API key.
 
-If you wish to have access to Available Ingredients, you can simply buy one for $2/month on [https://www.patreon.com/thedatadb](TheDataDB Patreon's Page). When you are given your key, simply find the '1' in the API_KEY in the config file, and replace it with your key, and be sure to change the API_ENDPOINT to '/api/json/v2/'.
+If you wish to have access to Available Ingredients, you can simply buy one for $2/month on [TheDataDB Patreon's Page](https://www.patreon.com/thedatadb/). When you are given your key, simply find the '1' in the API_KEY in the config file, and replace it with your key, and be sure to change the API_ENDPOINT to '/api/json/v2/'.
 
 ## Available Scripts
 
