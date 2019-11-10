@@ -18,6 +18,7 @@ html, body 								{ overflow-x: hidden; }
 	.Main 								{ height: 100vh; position: relative;
 		@media(max-width: $screen-md)	{ min-height: initial; }
 		.Header 						{ height: 10%; padding: 0 40px;
+			@media(max-width: $screen-md){ height: initial; }
 			.row 						{ align-items: center; height: 100%; }
 			.Nav-icon 					{ text-align: left;
 				a 						{ color: black; }
@@ -116,7 +117,9 @@ html, body 								{ overflow-x: hidden; }
 		}
 
 		.DrinkContainer 				{ height: 100%; position: absolute; width: 100%;
+			@media(max-width: $screen-md){ height: initial; }
 			.Drink 						{ height: 100%; 
+				@media(max-width: $screen-md){ height: initial; }
 				.Drink-image 			{ background-position: center center; background-size: cover; min-height: 500px; }
 				.Drink-content 			{ 
 					.Drink-inner 		{ padding: 60px; text-align: left; 
@@ -157,10 +160,13 @@ html, body 								{ overflow-x: hidden; }
 		.Footer 						{ padding: 40px 20px;
 			.row 						{ display: flex; flex-direction: row; align-items: center; 
 				.copyright 				{ text-align: left;
+					@media(max-width: $screen-md)	{ margin-bottom: 20px; text-align: center; }
 					p 					{ font-size: 13px; margin: 0; }
 				}
 				.menu 					{
+
 					ul 					{ display: flex; flex-direction: row; align-items: center; justify-content: flex-end; list-style-type: none; 
+						@media(max-width: $screen-md)	{ justify-content: center; margin-bottom: 20px; text-align: center; }
 						li 				{ margin: 0 15px;
 							a 			{ color: $primary-color; padding: 5px 10px; }
 						}
