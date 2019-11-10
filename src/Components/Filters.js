@@ -16,7 +16,7 @@ class Filters extends Component {
 	}
 
 	handleChange = (arr) => {
-		console.log(arr);
+		// console.log(arr);
 		var x = document.getElementById("ingredients-list");
   		x.value = arr.join();
 	}
@@ -31,7 +31,7 @@ class Filters extends Component {
 			}
 		}
 
-		console.log(this.handleChange);
+		// console.log(this.handleChange);
 
 		return (
 			<div className="Filters">
@@ -48,7 +48,7 @@ class Filters extends Component {
 								<MultiSearchSelect searchable={true} showTags={true} multiSelect={true} onSelect={this.handleChange} options={values}/>
 							</div>
 							<div className="col-12 submit">
-								<input id="ingredients-list" name="ingredients" type="hidden" value={ this.handleChange } />
+								<input id="ingredients-list" name="ingredients" type="hidden" value={this.state.value} onChange={ this.handleChange } />
 								<button type="submit">Submit</button>
 							</div>
 						</div>
