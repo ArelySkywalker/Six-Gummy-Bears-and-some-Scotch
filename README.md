@@ -24,12 +24,19 @@ I'm open for contributions to make this app better! Feel free to take a look und
 
 For people who contribute from now up until the end of this year (Dec 31), I will get in contact with you all and I'm gonna let you folks decide what domain name to get for this app!
 
-When you contribute, be sure to edit this README file and add your name to the bottom of the list. The format should be:
+When you contribute, be sure to edit this README file and add your name to the bottom of the list. 
+
+The format should be:
+
 { Name }, { Title }, { Favorite Drink }
 
+
 Examples:
+
 Arely Miramontes Rodríguez, Software Engineer, Margarita
+
 Cersei Lannister, Queen of the Seven Kingdoms, Wine
+
 Jane Doe, Student, Orange Juice  
 
 ## Getting Started
