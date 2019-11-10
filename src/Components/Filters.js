@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Config from '../config';
 import MultiSearchSelect from "react-search-multi-select";
 
-var key;
-
 class Filters extends Component {
 
 	state = {

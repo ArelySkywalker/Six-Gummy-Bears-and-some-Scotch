@@ -3,7 +3,7 @@ import Config from '../config';
 import Footer from '../Components/Footer';
 import Banner from '../Components/Banner';
 import Card from '../Components/Card';
-import { getBaseURL, getUrlVars, getUrlParam } from '../Components/Helpers';
+import { getUrlParam } from '../Components/Helpers';
 
 
 var search = getUrlParam('s','Empty');	

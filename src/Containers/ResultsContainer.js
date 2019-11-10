@@ -3,7 +3,7 @@ import Config from '../config';
 import Footer from '../Components/Footer';
 import Banner from '../Components/Banner';
 import Card from '../Components/Card';
-import { getBaseURL, getUrlVars, getUrlParam } from '../Components/Helpers';
+import { getUrlParam } from '../Components/Helpers';
 
 var ingredients = getUrlParam('ingredients','Empty');	
 
@@ -23,7 +23,7 @@ class ResultsContainer extends Component {
 		const { data } = this.state;
 		const drinks = data.drinks;
 
-		if(drinks == "None Found") {
+		if(drinks === "None Found") {
 			return (
 				<div className="Recipes">
 					<Banner />

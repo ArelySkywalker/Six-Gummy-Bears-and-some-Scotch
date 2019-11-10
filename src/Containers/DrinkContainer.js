@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Config from '../config';
 import Drink from '../Components/Drink';
 import Footer from '../Components/Footer';
-import { getBaseURL, getUrlVars, getUrlParam } from '../Components/Helpers';
+import { getUrlParam } from '../Components/Helpers';
 
 
 var drinkID = getUrlParam('id','Empty');	

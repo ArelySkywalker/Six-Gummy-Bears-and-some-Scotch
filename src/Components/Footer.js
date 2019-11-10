@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
 class Footer extends Component {
-	state = { showing: false };
 	render() {
-		const { showing } = this.state;
 		return (
 			<div className="Footer">
 				<div className="container-wide">

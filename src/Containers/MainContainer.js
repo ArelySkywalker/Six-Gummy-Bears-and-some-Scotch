@@ -1,6 +1,6 @@
 // Import our Routers
-import React, { Component }  from 'react';
-import { BrowserRouter, Router, Route, Switch } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomeContainer from './HomeContainer';
 import RecipeContainer from './RecipeContainer';
 import DrinkContainer from './DrinkContainer';
