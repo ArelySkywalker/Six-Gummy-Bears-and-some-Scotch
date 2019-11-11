@@ -16,7 +16,7 @@ html, body 								{ overflow-x: hidden; }
 	a 									{ color: $primary-color; }
 
 	.Main 								{ height: 100vh; position: relative;
-		@media(max-width: $screen-md)	{ min-height: initial; }
+		@media(max-width: $screen-md)	{ height: initial; position: initial; }
 		.Header 						{ height: 10%; padding: 0 40px;
 			@media(max-width: $screen-md){ height: initial; }
 			.row 						{ align-items: center; height: 100%; }
