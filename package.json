@@ -3,16 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.1.2",
     "@material-ui/icons": "^4.2.1",
-    "bootstrap": "^4.3.1",
-    "node-sass": "^4.12.0",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "bootstrap": "^4.6.0",
+    "eslint": "^7.5.0",
+    "jquery": "^1.9.1",
+    "node-sass": "^4.14.1",
+    "popper.js": "^1.16.1",
     "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.10",
+    "react-bootstrap": "^1.5.1",
     "react-dom": "^16.8.6",
     "react-lazyload": "^2.6.2",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
-    "react-search-multi-select": "^1.0.8"
+    "react-scripts": "^4.0.3",
+    "react-search-multi-select": "^1.0.8",
+    "typescript": "^4.2.3"
+  },
+  "devDependencies": {
+    "immer": ">=8.0.1",
+    "node-notifier": ">=8.0.1",
+    "ini": ">=1.3.6"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -37,7 +37,7 @@ class Card extends Component {
 							
 							return (
 								<a href={ `/drink?id=${ drink.idDrink }` } className="Card-drink" key={ drink.idDrink }>
-									<img className="icon" alt={ drink.strGlass } src={require('./Images/glass/'+ glass +'.png')} />
+									<img className="icon" alt={ drink.strGlass } src={require('./Images/glass/'+ glass +'.png').default} />
 									<h3 className="drink-name">{ drink.strDrink }</h3>
 									<p className="drink-cat">
 										<strong>{ drink.strCategory }</strong><br />
