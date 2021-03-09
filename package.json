@@ -9,7 +9,7 @@
     "@typescript-eslint/parser": "^4.17.0",
     "bootstrap": "^4.6.0",
     "eslint": "^7.5.0",
-    "jquery": "^1.9.1",
+    "jquery": "^3.5.0",
     "node-sass": "^4.14.1",
     "popper.js": "^1.16.1",
     "react": "^16.8.6",
