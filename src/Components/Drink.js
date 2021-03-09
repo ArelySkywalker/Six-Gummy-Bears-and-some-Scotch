@@ -34,7 +34,7 @@ class Drink extends Component {
 								</ul>
 							</div>
 							<div className="col-sm-6">
-								<img className="icon" alt={ this.props.glass } src={require('./Images/glass/'+ glass +'.png')} />
+								<img className="icon" alt={ this.props.glass } src={require('./Images/glass/'+ glass +'.png').default} />
 								<h6>{ this.props.glass }</h6>
 							</div>
 						</div>
