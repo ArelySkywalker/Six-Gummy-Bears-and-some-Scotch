@@ -42,23 +42,25 @@ class Filters extends Component {
 	handleSelect = (type, eventKey, event) => {
 		switch (type) {
 			case "drinkType":
-			this.setState({
-				...this.state,
-				drinkType: this.state.drinkTypeList[eventKey].strAlcoholic
-			});
-			break;
+				this.setState({
+					...this.state,
+					drinkType: this.state.drinkTypeList[eventKey].strAlcoholic
+				});
+				break;
 			case "category":
-			this.setState({
-				...this.state,
-				category: this.state.categoryList[eventKey].strCategory
-			});
-			break;
+				this.setState({
+					...this.state,
+					category: this.state.categoryList[eventKey].strCategory
+				});
+				break;
 			case "glass":
-			this.setState({
-				...this.state,
-				glass: this.state.glassTypeList[eventKey].strGlass
-			});
-			break;
+				this.setState({
+					...this.state,
+					glass: this.state.glassTypeList[eventKey].strGlass
+				});
+				break;
+			default:
+				break;
 		}
 	}
 
@@ -74,7 +76,7 @@ class Filters extends Component {
 				multiSelectValues.push(ingredients[key].strIngredient1);
 			}
 		}
-		
+
 		return (
 			<div className="Filters">
 				<div className="container">

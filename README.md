@@ -18,6 +18,13 @@ Version 1 is now live! There is still a lot of work to do on this baby. Some stu
  - 2. ~~Create more filters~~ Available ingredients filter added!
  - 3. Always more room for refactoring!
 
+Version 2:
+ - 1. Added more filters to the Available ingredients. Users can now filter by Drink Type, Category and Glass Type.
+
+ TODO:
+ - 1. Add Popular cocktails page
+ - 2. Add Most Latest cocktails page
+
 ## Contribution
 
 I'm open for contributions to make this app better! Feel free to take a look under the Issues tab and take a stab at one. If there are no current Issues, you can definitely add some ideas/suggestions for new features!
@@ -66,3 +73,4 @@ The build is minified and the filenames include the hashes.<br>
 
 ## Our Boozy Contributors
 - Arely Miramontes Rodríguez, Software Engineer, Margarita
+- @eynglv
