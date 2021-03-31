@@ -5,12 +5,21 @@ import Banner from '../Components/Banner';
 import Card from '../Components/Card';
 import { getUrlParam } from '../Components/Helpers';
 
-var ingredients = getUrlParam('ingredients','Empty');	
+var ingredients = getUrlParam('ingredients', undefined);
+var drinkType = getUrlParam('drinkType', undefined);
+var category = getUrlParam('category', undefined);
+var glass = getUrlParam('glass', undefined);
+
+const parameters = "?" 
+	+ (ingredients ? "i=" + ingredients : "") 
+	+ (drinkType ? "&a=" + drinkType : "") 
+	+ (category ? "&c=" + category : "")
+	+ (glass ? "&g=" + glass : "");
 
 class ResultsContainer extends Component {
 	state = {
 		data:[],
-		url: Config.API_HOST + Config.API_ENDPOINT + Config.API_KEY + "/filter.php?i=" + ingredients
+		url: Config.API_HOST + Config.API_ENDPOINT + Config.API_KEY + "/filter.php" + parameters
 	};
 
 	componentDidMount() {

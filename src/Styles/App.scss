@@ -149,9 +149,14 @@ html, body 								{ overflow-x: hidden; }
 						input 			{ @extend p; background: $white !important; }
 					}
 				}
-				.submit					{
-					button 				{ border: 1px solid $primary-color; color: $primary-color; margin-top: 40px; padding: 10px 20px; transition: all .3s;
-						&:hover, &:active, &:focus { background: $primary-color; color: $white; }
+				.dropdown-wrapper 		{ margin-bottom: 30px;
+					button 				{ background: $white; border: 1px solid $secondary-color; color: $secondary-color; margin-top: 40px; padding: 10px 20px; transition: all .3s;
+						&:hover, &:active, &:focus { background: $secondary-color; box-shadow: none; color: $white; }
+					}
+				}
+				.submit 				{
+					button 				{ background: $primary-color; border: 1px solid $primary-color; color: $white; margin: 20px auto; padding: 10px 20px; transition: all .3s;
+						&:hover, &:active, &:focus { background: $white; color: $primary-color; }
 					}
 				}
 			}
