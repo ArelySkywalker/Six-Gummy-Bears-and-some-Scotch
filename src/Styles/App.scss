@@ -38,10 +38,20 @@ html, body 								{ overflow-x: hidden; }
 			.Menu 						{ align-items: center; background: rgba($black, 0.95); display: flex; height: 100vh; width: 100%; top: 0; left: 0; position: absolute; z-index: 1000000; 
 				ul 						{ list-style-type: none; padding: 0; width: 100%; 
 					li 					{ margin: 20px 0;
-						a 				{ text-shadow: 0px 10px 10px rgba($black, 1); color: $white; font-family: $header-font; font-size: 3rem; padding: 5px 15px; 
+						a, button		{ text-shadow: 0px 10px 10px rgba($black, 1); color: $white; font-family: $header-font; font-size: 3rem; padding: 5px 15px; 
 							&:hover 	{ border-bottom: 1px solid $primary-color; text-decoration: none; }
 							@media(max-width: $screen-md) { font-size: 2.5rem; }
 							@media(max-width: $screen-sm) { font-size: 2rem; }
+						}
+						.accordion 		{
+							button 		{ border-bottom: 1px solid rgba(255, 255, 255, 0.75); text-decoration: none;
+								.fas 	{ font-size: 2rem; }
+								&:focus { border: none; box-shadow: none; }
+								&:hover { border-bottom: 1px solid $primary-color; text-decoration: none; }
+							}
+							ul li 		{ margin: 10px 0; 
+								a 		{ font-family: $header-font-2; font-size: 2rem; }
+							}
 						}
 						@media(max-width: $screen-sm) { margin: 10px 0; }
 					}
@@ -80,7 +90,7 @@ html, body 								{ overflow-x: hidden; }
 			&.whiskey 					{
 				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-whiskey.jpg') !important; }
 			}
-			&.search, &.about, &.filters, &.results {
+			&.search, &.about, &.filters, &.results, &.popular {
 				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-mezcal.jpg') !important; }
 			}
 		}

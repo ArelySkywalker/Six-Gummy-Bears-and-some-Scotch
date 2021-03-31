@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Accordion from "react-bootstrap/Accordion";
+import Button from "react-bootstrap/Button";
 
 const categories = [
 	{ name: 'Whiskey', link: '/whiskey' },
@@ -19,13 +21,25 @@ class Menu extends Component {
 							<button type="submit"><i className="fas fa-search"></i></button>
 						</form>
 					</li>
-					{categories && categories.map(
-						(item, index) => {
-							return (
-								<li key={ index }><a href={ item.link }>{ item.name }</a></li>
-							)
-						}
-					)}
+					<li>
+						<Accordion>
+							<Accordion.Toggle as={Button} variant="link" eventKey="0">
+								Common Liquors <i className="fas fa-chevron-down"></i>
+							</Accordion.Toggle>
+							<Accordion.Collapse eventKey="0">
+								<ul>
+									{categories && categories.map(
+										(item, index) => {
+											return (
+												<li key={ index }><a href={ item.link }>{ item.name }</a></li>
+											)
+										}
+									)}
+								</ul>
+							</Accordion.Collapse>
+						</Accordion>
+					</li>
+					<li><a href="/popular">Popular Drinks</a></li>
 					<li><a href="/filters">Available Ingredients</a></li>
 				</ul>
 			</div>

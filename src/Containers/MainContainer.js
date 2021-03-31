@@ -8,6 +8,7 @@ import SearchContainer from './SearchContainer';
 import AboutContainer from './AboutContainer';
 import FiltersContainer from './FiltersContainer';
 import ResultsContainer from './ResultsContainer';
+import CommonContainer from './CommonContainer';
 
 const MainContainer = () => (
 	<BrowserRouter>
@@ -23,6 +24,7 @@ const MainContainer = () => (
 			<Route path="/about" component={ AboutContainer } />
 			<Route path="/filters" component={ FiltersContainer } />
 			<Route path="/results" component={ ResultsContainer } />
+			<Route patch="/popular" component={ CommonContainer } />
 		</Switch>
 	</BrowserRouter>
 )
