@@ -22,7 +22,7 @@
     "typescript": "^4.2.3"
   },
   "devDependencies": {
-    "immer": ">=8.0.1",
+    "immer": ">=9.0.6",
     "node-notifier": ">=8.0.1",
     "ini": ">=1.3.6"
   },
