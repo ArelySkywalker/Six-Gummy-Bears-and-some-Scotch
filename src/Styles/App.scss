@@ -1,194 +1,526 @@
 // Variables
 @import "./Variables.scss";
 
-html, body 								{ overflow-x: hidden; }
+html,
+body {
+    overflow-x: hidden;
+}
 
-.App									{ background: $white; text-align: center;
-	img									{ max-width: 100%; }
-	h1,h2,h3,h4 						{ font-family: $header-font; }
-	h1 									{ font-size: 3.5rem; }
-	h4 									{ font-family: $header-font-2; }
-	h6 									{ font-family: $body-font; }
-	p, ul li, ol li 					{ font-family: $body-font; }
-	ul, ol 								{
-		li 								{ margin-bottom: 10px; }
-	}
-	a 									{ color: $primary-color; }
+.App {
+    background: $white;
+    text-align: center;
+    img {
+        max-width: 100%;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: $header-font;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    h4 {
+        font-family: $header-font-2;
+    }
+    h6 {
+        font-family: $body-font;
+    }
+    p,
+    ul li,
+    ol li {
+        font-family: $body-font;
+    }
+    ul,
+    ol {
+        li {
+            margin-bottom: 10px;
+        }
+    }
+    a {
+        color: $primary-color;
+    }
 
-	.Main 								{ height: 100vh; position: relative;
-		@media(max-width: $screen-md)	{ height: initial; position: initial; }
-		.Header 						{ height: 10%; padding: 0 40px;
-			@media(max-width: $screen-md){ height: initial; }
-			.row 						{ align-items: center; height: 100%; }
-			.Nav-icon 					{ text-align: left;
-				a 						{ color: black; }
-				.fas, h1 				{ display: inline-block; margin: 0; vertical-align: middle; }
-				.fas 					{ color: $primary-color; font-size: 2rem; margin-right: 15px; }
-			}
-			.Title 						{ text-align: right; 
-				.fas 					{ cursor: pointer; font-size: 2rem; }
-				.fa-times 				{ display: none; }
-			}
-			
-			&.open 						{
-				.fa-bars 				{ display: none; }
-				.fa-times				{ color: $white; display: block; position: relative; z-index: 100000000000; }
-			}
+    .Main {
+        background-color: rgba(246, 247, 248, 0.8) !important;
+        height: 100vh;
+        position: relative;
+        @media (max-width: $screen-md) {
+            height: initial;
+            position: initial;
+        }
+        .card-drink-name {
+            font-family: $header-font-2;
+        }
+        .card-button {
+            background: $primary-color;
+            border: 1px solid $primary-color;
+            color: $white;
+            font-family: $body-font;
+            font-variant-caps: normal;
+        }
+        .Header {
+            height: 10%;
+            padding: 0 40px;
+            @media (max-width: $screen-md) {
+                height: initial;
+            }
+            .row {
+                align-items: center;
+                height: 100%;
+            }
+            .Nav-icon {
+                text-align: left;
+                a {
+                    color: black;
+                }
+                .fas,
+                h1 {
+                    display: inline-block;
+                    margin: 0;
+                    vertical-align: middle;
+                }
+                .fas {
+                    color: $primary-color;
+                    font-size: 2rem;
+                    margin-right: 15px;
+                }
+            }
+            .Title {
+                text-align: right;
+                .fas {
+                    cursor: pointer;
+                    font-size: 2rem;
+                }
+                .fa-times {
+                    display: none;
+                }
+            }
 
-			.Menu 						{ align-items: center; background: rgba($black, 0.95); display: flex; height: 100vh; width: 100%; top: 0; left: 0; position: absolute; z-index: 1000000; 
-				ul 						{ list-style-type: none; padding: 0; width: 100%; 
-					li 					{ margin: 20px 0;
-						a, button		{ text-shadow: 0px 10px 10px rgba($black, 1); color: $white; font-family: $header-font; font-size: 3rem; padding: 5px 15px; 
-							&:hover 	{ border-bottom: 1px solid $primary-color; text-decoration: none; }
-							@media(max-width: $screen-md) { font-size: 2.5rem; }
-							@media(max-width: $screen-sm) { font-size: 2rem; }
-						}
-						.accordion 		{
-							button 		{ border-bottom: 1px solid rgba(255, 255, 255, 0.75); text-decoration: none;
-								.fas 	{ font-size: 2rem; }
-								&:focus { border: none; box-shadow: none; }
-								&:hover { border-bottom: 1px solid $primary-color; text-decoration: none; }
-							}
-							ul li 		{ margin: 10px 0; 
-								a 		{ font-family: $header-font-2; font-size: 2rem; }
-							}
-						}
-						@media(max-width: $screen-sm) { margin: 10px 0; }
-					}
-					.search 			{ margin-bottom: 50px;
-						form 			{ display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 0 20px; 
-							button 		{ background: transparent; border: none;
-								.fa-search 	{ color: $white; font-size: 30px; margin-right: 15px; vertical-align: bottom; }
-							}
-							input 		{ background: transparent; border:none; border-bottom: 1px solid $white; color: $white; height: 50px; max-width: 400px; width: 100%; 
-								&:focus, &:active { border-bottom: 1px solid $white; box-shadow: none; outline: none; }
-								@media(max-width: $screen-sm) { max-width: 250px; }
-							}
-						}
-					}
-				}
-			}
-		}
-	
-		.Banner 						{
-			.Banner-bg 					{ background-position: center center; background-size: cover; display: table; margin-bottom: 80px; min-height: 450px; position: relative; width: 100%;
-				&:before 				{ content: ''; background: rgba($black, 0.7); position: absolute; height: 100%; top: 0; left: 0; width: 100%; }
-				.Banner-title 			{ color: $white; display: table-cell; font-size: 5rem; position: relative; text-shadow: 0px 10px 10px rgba($black, 1); vertical-align: middle; z-index: 1000; }
-			}
-			&.tequila 					{
-				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-tequila.jpg') !important; }
-			}
-			&.rum 						{
-				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-rum.jpg') !important; }
-			}
-			&.gin 						{
-				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-gin.jpg') !important; background-position: top center; }
-			}
-			&.vodka 					{
-				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-vodka.jpg') !important; }
-			}
-			&.whiskey 					{
-				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-whiskey.jpg') !important; }
-			}
-			&.search, &.about, &.filters, &.results, &.popular {
-				.Banner-bg 				{ background-image: url('../Components/Images/Optimized-mezcal.jpg') !important; }
-			}
-		}
-	
-		.Home							{ height: 90%; width: 100%;
-			.Home-ingredients			{ height: 100%; width: 100%;
-				.Ingredient				{ background-position: center center; background-size: cover; cursor: pointer; display: table; float: left; height: 100%; position: relative; width: 20%;
-					@media(max-width: $screen-md) { height: 500px; width: 100%; }
-					&:before			{ content: ''; background-color: rgba($black, .6); position: absolute; top: 0; left: 0; height: 100%; transition: all .3s; width: 100%; }
-					&:hover 			{
-						&:before 		{ background-color: rgba($black, .3); }
-					}
-					.inner				{ display: table-cell; position: relative; vertical-align: middle; z-index: 100;
-					h1,p				{ text-shadow: 0px 10px 10px rgba($black, 1); color: $white; margin: 0; }
-					}
-					&.Tequila, .Gin		{ background-position: center right; }
-				}
-			}
-		}
+            &.open {
+                .fa-bars {
+                    display: none;
+                }
+                .fa-times {
+                    color: $white;
+                    display: block;
+                    position: relative;
+                    z-index: 100000000000;
+                }
+            }
 
-		.Recipes 						{ 
-			.Recipes-loop 				{ padding-bottom: 80px; }
-			.Card						{ cursor: pointer; margin-bottom: 40px;
-				&:hover 				{
-					.inner 				{ -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.3); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3); }
-				}
-				.inner					{ -webkit-box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.15); box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.15); height: 100%; padding: 40px; transition: all .3s; 
-					.Card-drink 		{ color: $black; display: block; text-decoration: none;
-						.icon 			{ margin-bottom: 20px; max-height: 100px; }
-						.drink-name 	{ color: $primary-color; font-family: $header-font-2; margin-bottom: 15px; } 
-					}
-				}
-			}
-		}
+            .Menu {
+                align-items: center;
+                background: rgba($black, 0.95);
+                display: flex;
+                height: 100vh;
+                width: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
+                z-index: 1000000;
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                    width: 100%;
+                    li {
+                        margin: 20px 0;
+                        a,
+                        button {
+                            text-shadow: 0px 10px 10px rgba($black, 1);
+                            color: $white;
+                            font-family: $header-font;
+                            font-size: 3rem;
+                            padding: 5px 15px;
+                            &:hover {
+                                border-bottom: 1px solid $primary-color;
+                                text-decoration: none;
+                            }
+                            @media (max-width: $screen-md) {
+                                font-size: 2.5rem;
+                            }
+                            @media (max-width: $screen-sm) {
+                                font-size: 2rem;
+                            }
+                        }
+                        .accordion {
+                            button {
+                                border-bottom: 1px solid
+                                    rgba(255, 255, 255, 0.75);
+                                text-decoration: none;
+                                .fas {
+                                    font-size: 2rem;
+                                }
+                                &:focus {
+                                    border: none;
+                                    box-shadow: none;
+                                }
+                                &:hover {
+                                    border-bottom: 1px solid $primary-color;
+                                    text-decoration: none;
+                                }
+                            }
+                            ul li {
+                                margin: 10px 0;
+                                a {
+                                    font-family: $header-font-2;
+                                    font-size: 2rem;
+                                }
+                            }
+                        }
+                        @media (max-width: $screen-sm) {
+                            margin: 10px 0;
+                        }
+                    }
+                    .search {
+                        margin-bottom: 50px;
+                        form {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0 20px;
+                            button {
+                                background: transparent;
+                                border: none;
+                                .fa-search {
+                                    color: $white;
+                                    font-size: 30px;
+                                    margin-right: 15px;
+                                    vertical-align: bottom;
+                                }
+                            }
+                            input {
+                                background: transparent;
+                                border: none;
+                                border-bottom: 1px solid $white;
+                                color: $white;
+                                height: 50px;
+                                max-width: 400px;
+                                width: 100%;
+                                &:focus,
+                                &:active {
+                                    border-bottom: 1px solid $white;
+                                    box-shadow: none;
+                                    outline: none;
+                                }
+                                @media (max-width: $screen-sm) {
+                                    max-width: 250px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-		.DrinkContainer 				{ height: 100%; position: absolute; width: 100%;
-			@media(max-width: $screen-md){ height: initial; }
-			.Drink 						{ height: 100%; 
-				@media(max-width: $screen-md){ height: initial; }
-				.Drink-image 			{ background-position: center center; background-size: cover; min-height: 500px; }
-				.Drink-content 			{ 
-					.Drink-inner 		{ padding: 60px; text-align: left; 
-						.Drink-name 	{ border-bottom: 1px solid $primary-color; }
-						.Drink-needs 	{ margin: 40px 0; text-align: center;
-							ul 			{ text-align: left; }
-							.icon 		{ margin-bottom: 10px; max-height: 60px; }
-						}
-					}
-				}
-			}
-		}
+        .Banner {
+            .Banner-bg {
+                background-position: center center;
+                background-size: cover;
+                display: table;
+                margin-bottom: 80px;
+                min-height: 450px;
+                position: relative;
+                width: 100%;
+                &:before {
+                    content: "";
+                    background: rgba($black, 0.7);
+                    position: absolute;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                }
+                .Banner-title {
+                    color: $white;
+                    display: table-cell;
+                    font-size: 5rem;
+                    position: relative;
+                    text-shadow: 0px 10px 10px rgba($black, 1);
+                    vertical-align: middle;
+                    z-index: 1000;
+                }
+            }
+            &.tequila {
+                .Banner-bg {
+                    background-image: url("../Components/Images/Optimized-tequila.jpg") !important;
+                }
+            }
+            &.rum {
+                .Banner-bg {
+                    background-image: url("../Components/Images/Optimized-rum.jpg") !important;
+                }
+            }
+            &.gin {
+                .Banner-bg {
+                    background-image: url("../Components/Images/Optimized-gin.jpg") !important;
+                    background-position: top center;
+                }
+            }
+            &.vodka {
+                .Banner-bg {
+                    background-image: url("../Components/Images/Optimized-vodka.jpg") !important;
+                }
+            }
+            &.whiskey {
+                .Banner-bg {
+                    background-image: url("../Components/Images/Optimized-whiskey.jpg") !important;
+                }
+            }
+            &.search,
+            &.about,
+            &.filters,
+            &.results,
+            &.popular {
+                .Banner-bg {
+                    background-image: url("../Components/Images/Optimized-mezcal.jpg") !important;
+                }
+            }
+        }
 
-		.Filters 						{ margin-bottom: 100px;
-			form 						{ padding: 60px 30px; 
-				.select-wrapper			{
-					> div 				{ width: 100% !important; 
-						.input-area		{ background: $white !important; border: 1px solid $light-gray !important; 
-							.tags		{ background: $light-blue !important; color: $dark-gray !important; padding: 10px 15px !important; }
-						}
-						.option-area	{ background: $very-light-gray !important; 
-							button 		{ background: $primary-color !important; padding: 10px 20px !important; }
-							.option 	{
-								&:hover { background: $light-blue !important; color: $dark-gray !important; }
-							}
-						}
-						input 			{ @extend p; background: $white !important; }
-					}
-				}
-				.dropdown-wrapper 		{ margin-bottom: 30px;
-					button 				{ background: $white; border: 1px solid $secondary-color; color: $secondary-color; margin-top: 40px; padding: 10px 20px; transition: all .3s;
-						&:hover, &:active, &:focus { background: $secondary-color; box-shadow: none; color: $white; }
-					}
-				}
-				.submit 				{
-					button 				{ background: $primary-color; border: 1px solid $primary-color; color: $white; margin: 20px auto; padding: 10px 20px; transition: all .3s;
-						&:hover, &:active, &:focus { background: $white; color: $primary-color; }
-					}
-				}
-			}
-		}
+        .Home {
+            height: 90%;
+            width: 100%;
+            .Home-ingredients {
+                height: 100%;
+                width: 100%;
+                .Ingredient {
+                    background-position: center center;
+                    background-size: cover;
+                    cursor: pointer;
+                    display: table;
+                    float: left;
+                    height: 100%;
+                    position: relative;
+                    width: 20%;
+                    @media (max-width: $screen-md) {
+                        height: 500px;
+                        width: 100%;
+                    }
+                    &:before {
+                        content: "";
+                        background-color: rgba($black, 0.6);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        transition: all 0.3s;
+                        width: 100%;
+                    }
+                    &:hover {
+                        &:before {
+                            background-color: rgba($black, 0.3);
+                        }
+                    }
+                    .inner {
+                        display: table-cell;
+                        position: relative;
+                        vertical-align: middle;
+                        z-index: 100;
+                        h1,
+                        p {
+                            text-shadow: 0px 10px 10px rgba($black, 1);
+                            color: $white;
+                            margin: 0;
+                        }
+                    }
+                    &.Tequila,
+                    .Gin {
+                        background-position: center right;
+                    }
+                }
+            }
+        }
 
-		.Footer 						{ padding: 40px 20px;
-			.row 						{ display: flex; flex-direction: row; align-items: center; 
-				.copyright 				{ text-align: left;
-					@media(max-width: $screen-md)	{ margin-bottom: 20px; text-align: center; }
-					p 					{ font-size: 13px; margin: 0; }
-				}
-				.menu 					{
+        .Recipes {
+            .Recipes-loop {
+                padding-bottom: 80px;
+            }
+            .Card {
+                cursor: pointer;
+                margin-bottom: 40px;
+                &:hover {
+                    .inner {
+                        -webkit-box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.3);
+                        box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+                    }
+                }
+                .inner {
+                    -webkit-box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.15);
+                    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.15);
+                    height: 100%;
+                    transition: all 0.3s;
+                    .Card-drink {
+                        color: $black;
+                        display: block;
+                        text-decoration: none;
+                        .icon {
+                            margin-bottom: 20px;
+                            max-height: 100px;
+                        }
+                        .drink-name {
+                            color: $primary-color;
+                            font-family: $header-font-2;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
 
-					ul 					{ display: flex; flex-direction: row; align-items: center; justify-content: flex-end; list-style-type: none; 
-						@media(max-width: $screen-md)	{ justify-content: center; margin-bottom: 20px; text-align: center; }
-						li 				{ margin: 0 15px;
-							a 			{ color: $primary-color; padding: 5px 10px; }
-						}
-					}
-				}
-			}
-		}
-	}
-	
+        .DrinkContainer {
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            @media (max-width: $screen-md) {
+                height: initial;
+            }
+            .Drink {
+                height: 100%;
+                @media (max-width: $screen-md) {
+                    height: initial;
+                }
+                .Drink-image {
+                    background-position: center center;
+                    background-size: cover;
+                    min-height: 500px;
+                }
+                .Drink-content {
+                    .Drink-inner {
+                        padding: 60px;
+                        text-align: left;
+                        .Drink-name {
+                            border-bottom: 1px solid $primary-color;
+                        }
+                        .Drink-needs {
+                            margin: 40px 0;
+                            text-align: center;
+                            ul {
+                                text-align: left;
+                            }
+                            .icon {
+                                margin-bottom: 10px;
+                                max-height: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .Filters {
+            margin-bottom: 100px;
+            form {
+                padding: 60px 30px;
+                .select-wrapper {
+                    > div {
+                        width: 100% !important;
+                        .input-area {
+                            background: $white !important;
+                            border: 1px solid $light-gray !important;
+                            .tags {
+                                background: $light-blue !important;
+                                color: $dark-gray !important;
+                                padding: 10px 15px !important;
+                            }
+                        }
+                        .option-area {
+                            background: $very-light-gray !important;
+                            button {
+                                background: $primary-color !important;
+                                padding: 10px 20px !important;
+                            }
+                            .option {
+                                &:hover {
+                                    background: $light-blue !important;
+                                    color: $dark-gray !important;
+                                }
+                            }
+                        }
+                        input {
+                            @extend p;
+                            background: $white !important;
+                        }
+                    }
+                }
+                .dropdown-wrapper {
+                    margin-bottom: 30px;
+                    button {
+                        background: $white;
+                        border: 1px solid $secondary-color;
+                        color: $secondary-color;
+                        margin-top: 40px;
+                        padding: 10px 20px;
+                        transition: all 0.3s;
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            background: $secondary-color;
+                            box-shadow: none;
+                            color: $white;
+                        }
+                    }
+                }
+                .submit {
+                    button {
+                        background: $primary-color;
+                        border: 1px solid $primary-color;
+                        color: $white;
+                        margin: 20px auto;
+                        padding: 10px 20px;
+                        transition: all 0.3s;
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            background: $white;
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .Footer {
+            padding: 40px 20px;
+            .row {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .copyright {
+                    text-align: left;
+                    @media (max-width: $screen-md) {
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
+                    p {
+                        font-size: 13px;
+                        margin: 0;
+                    }
+                }
+                .menu {
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-end;
+                        list-style-type: none;
+                        @media (max-width: $screen-md) {
+                            justify-content: center;
+                            margin-bottom: 20px;
+                            text-align: center;
+                        }
+                        li {
+                            margin: 0 15px;
+                            a {
+                                color: $primary-color;
+                                padding: 5px 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
