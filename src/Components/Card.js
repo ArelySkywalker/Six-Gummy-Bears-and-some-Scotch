@@ -6,36 +6,44 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
     cardRoot: {
         display: "flex",
-        padding: theme.spacing(2),
+        padding: theme.spacing(1),
         marginBottom: theme.spacing(2),
         boxShadow: "none", // Removes card shadow
         border: "none", // Optional border to separate cards
     },
     imageContainer: {
-        height: 300, // Adjust height as needed
-        width: 300, // Adjust width
+        height: "300px", // Default size for large screens
+        width: "300px", // Default size for large screens
         borderRadius: "50%",
         backgroundSize: "cover",
         backgroundPosition: "center",
         marginBottom: theme.spacing(2),
+
+        // Center the image container in its parent
+        display: "inline-flex",
+        justifyContent: "center",
+        alignItems: "center",
+
+        [theme.breakpoints.down("md")]: {
+            height: "250px",
+            width: "250px",
+        },
     },
     cardContent: {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        alignItems: "center", // Ensures both name and button are centered
+        alignItems: "center", // Centers the name and button as well
+        width: "100%", // Ensures the card content is full width
     },
-    // Remove underline from link
     link: {
         textDecoration: "none", // Removes underline from anchor tag
         color: "inherit", // Keeps the text color from the parent
     },
-    // Typography h4 style to prevent all caps
     typography: {
         textTransform: "none", // Prevents text from being in all caps
         textAlign: "center", // Ensures the title is centered
     },
-    // Button style with custom text and border color, and hover effect
     button: {
         marginTop: theme.spacing(1),
         textTransform: "lowercase", // Makes text all lowercase
@@ -68,13 +76,10 @@ const DrinkCard = ({ drink }) => {
                     <Typography variant="h4" className={classes.typography}>
                         {drink.strDrink}
                     </Typography>
+                    <Button variant="outlined" className={classes.button}>
+                        s view recipe
+                    </Button>
                 </a>
-                <Button
-                    variant="outlined" // Ensures the button has an outline
-                    className={classes.button}
-                >
-                    view recipe
-                </Button>
             </CardContent>
         </Card>
     );
