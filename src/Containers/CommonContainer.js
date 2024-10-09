@@ -64,13 +64,7 @@ class CommonContainer extends Component {
                                                 key={index}
                                             >
                                                 <Item>
-                                                    <DrinkCard
-                                                        name={drink.strDrink}
-                                                        id={drink.idDrink}
-                                                        image={
-                                                            drink.strDrinkThumb
-                                                        }
-                                                    />
+                                                    <DrinkCard drink={drink} />
                                                 </Item>
                                             </Grid>
                                         );

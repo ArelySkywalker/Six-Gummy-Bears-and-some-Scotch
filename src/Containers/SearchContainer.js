@@ -57,11 +57,7 @@ class SearchContainer extends Component {
                                     return (
                                         <Grid item xs={6} md={4} key={index}>
                                             <Item>
-                                                <DrinkCard
-                                                    name={drink.strDrink}
-                                                    id={drink.idDrink}
-                                                    image={drink.strDrinkThumb}
-                                                />
+                                                <DrinkCard drink={drink} />
                                             </Item>
                                         </Grid>
                                     );
