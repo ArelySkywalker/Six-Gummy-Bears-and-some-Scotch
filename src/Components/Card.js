@@ -77,7 +77,7 @@ const DrinkCard = ({ drink }) => {
                         {drink.strDrink}
                     </Typography>
                     <Button variant="outlined" className={classes.button}>
-                        s view recipe
+                        view recipe
                     </Button>
                 </a>
             </CardContent>
